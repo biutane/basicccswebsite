@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="pic/logo.png">
+        <div class="btn">
+            <button type="button" class="loginbtn" data-bs-toggle="modal" data-bs-target="#modal-login"
+                data-bs-toggle="modal" data-bs-target="#modal-login">LOGIN</button>
+        </div>
+    </div>
+    <div class="modal" id="modal-login" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">LOGIN</h5>
+                    <button type="button" class="btn-close btn-cancel shadow-none" data-bs-dismiss="modal"
+                        aria-label="Close"><img src="img/cancle.png"></button>
+                </div>
+                <form id="login-form" action="" class="">
+                    <div class="modal-body mb-3">
+                        <input type="email" cLass="form-control" id="input-email-login" placeholder="กรอกอีเมล" required>
+                        <br />
+                        <input type="password" class="form-control" id="input-password-login" placeholder="กรอกรหัสผ่าน"
+                            required>
+                        <p id="feedback-msg-login"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-gray btn-cancel" data-bs-dismiss="modal">ยกเลิก</button>
+                        <button type="submit" class="btn btn-purple">LOGIN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

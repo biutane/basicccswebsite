@@ -4,8 +4,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="waiting.css">
 </head>
 <body>
-    
+    <nav>
+        <div class="back">
+            <button class="btnback">
+                <img src="pic/back_icon.png" height="50px">
+            </button>
+        </div>
+        <div class="back">
+            <button class="btnback">
+                <img src="pic/home_icon.png" height="50px">
+            </button>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="row match">
+            <div class="col-lg-4 col-sm-12 col-md-4 playerone">
+                <div class="pic" id="pic-profile">
+                    <img src="img/profile/pfload.png">
+                </div>
+                <div class="username-x" id="nickname">
+                    <!-- <div>loading...</div> -->
+                </div>
+                <div class="buttonjoin">
+                    <button type="button" class="username1">del</button>
+                    <!-- <button type="button" id="join-x" class="btnjoin-x" onclick="ready('x')">พร้อม</button>
+                    <button type="button" id="cancel-x" class="btncancel-x" onclick="cancel('x')">ยกเลิก</button> -->
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-12 col-md-2 vs">
+                <img src="pic/vs.png" width="300vw">
+            </div>
+            <div class="col-lg-4 col-sm-12 col-md-4 playertwo">
+                <!-- <div class="ready" id="invitefr">เชิญเพื่อน</div>
+                <div class="ready" id="readyjoino">กด "พร้อม" เพื่อเริ่มเกม</div> -->
+                <div class="pic" id="invite">
+                    <img src="img/profile/pfinvite.png">
+                </div>
+                <div class="username-o">
+                    <div>loading...</div>
+                </div>
+                <div class="buttonjoin">
+                    <button type="button" class="username2">del</button>
+                    <!-- <button type="button" id="join-o" class="btnjoin-o" onclick="ready('o')">พร้อม</button>
+                    <button type="button" id="cancel-o" class="btncancel-o" onclick="cancel('o')">ยกเลิก</button> -->
+                </div>
+            </div>
+        </div>
+        <div class="starts">
+            <button class="btnstart" id="btn-startgame">Start</button>
+        </div>
+    </div>
 </body>
 </html>

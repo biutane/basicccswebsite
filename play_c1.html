@@ -16,6 +16,7 @@
 <body>
     <div class="container">
         <div class="code">
+            <div class="hint"></div>
             <div class="html-code">
                 <label>HTML</label>
                 <textarea id="html-code" onkeyup="runcode()"></textarea>
@@ -27,6 +28,9 @@
         </div>
         <div class="preview">
             <iframe id="output"></iframe>
+        </div>
+        <div class="time">
+            <h1 id="timer">00:00</h1>
         </div>
     </div>
     <script>
@@ -47,6 +51,32 @@
    
         }
 
+        //time//
+        let timeSecond = 120;
+        const timeH = document.querySelector("#timer");
+
+        displayTime(timeSecond);
+
+        const countDown = setInterval(() => {
+        timeSecond--;
+        displayTime(timeSecond);
+        if (timeSecond == 0 || timeSecond < 1) {
+            endCount();
+            clearInterval(countDown);
+        }
+        }, 1000);
+
+        function displayTime(second) {
+        const min = Math.floor(second / 60);
+        const sec = Math.floor(second % 60);
+        timeH.innerHTML = `
+        ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
+        `;
+        }
+
+        function endCount() {
+        timeH.innerHTML = "Time out";
+        }
     </script>
 
 </body>

@@ -1,6 +1,7 @@
 const loginbtn = document.querySelector(".loginbtn");
 loginbtn.addEventListener('click', loginUser)
 
+
 firebase.auth().onAuthStateChanged((user) => {
     console.log('User: ', user);
     getList(user)

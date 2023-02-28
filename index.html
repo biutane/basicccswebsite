@@ -9,14 +9,41 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <nav>
+            <div class="logged-in" style="color: white">
+              <div id="profile-image"></div>
+              <div id="profile-name"></div>
+            </div>
+          </nav>
+        </div>
+      </nav>
+    <div class="logo">
+        <img src="pic/logo.png">
+        <div class="btn">
+            <button type="button" class="loginbtn" data-bs-toggle="modal" data-bs-target="#modal-login"
+                data-bs-toggle="modal" data-bs-target="#modal-login">LOGIN</button>
+        </div>
+    </div> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">magic css</a>
+          <nav>
+            <div class="logged-in" style="color: white">
+              <div class="d-inline-block me-2" id="profile-image"></div>
+              <div class="d-inline-block me-2" id="profile-name"></div>
+            </div>
+            
+            <button type="button" id="btnLogout" class="btn btn-outline-light logged-in"><i class="bi bi-box-arrow-right"></i> Logout</button>
+          </nav>
+        </div>
+      </nav>
     <div class="logo">
         <img src="pic/logo.png">
         <div class="btn">
@@ -24,8 +51,45 @@
                 data-bs-toggle="modal" data-bs-target="#modal-login">LOGIN</button>
         </div>
     </div>
+        <div class="container p-5 justify-content-center">
+          <div class="logged-in w-100">
+            <h2>Add List</h2>
+            <form id="add-todo-form">
+                <div class="content">
+                    <div class="user">
+                        <div id="profile">
+                            <div class="pic" id="pic-profile">
+                                <img src="img/profile/pfload.png">
+                            </div>
+                            <div class="username" id="nickname">
+                                <p>loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="score">
+                        loading...
+                    </div>
+                    <div class="joinfriend">
+                        <input type="text" id="roomid" name="roomid" placeholder="กรอกรหัสห้อง">
+                        <button class="btnjoinwith">เข้าร่วม</button>
+                    </div>
+                    
+                    <button class="btnplay" id="btn-playgame">สร้างห้อง</button>
+            
+                </div>
+            </form>
+            <div>
+              <h4>My List</h4>
+            </div>
+            <div id="main-content">
+              <ul id="name-list" class="list-group list-group-flush"></ul>
+            </div>
+          </div>
+        </div>
+    
+    <!-- <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
     <div class="modal" id="modal-login" tabindex="-1">
-        <div class="modal-dialog">
+        <div class="modal-dialog"> -->
             <!-- <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">LOGIN</h5>
@@ -46,19 +110,18 @@
                     </div>
                 </form>
             </div> -->
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
     <script>
         const firebaseConfig = {
-      apiKey: "AIzaSyAFTDdrW5N9TXsjOgV_GjNIYbZ83-cQVnU",
-      authDomain: "web-design-javascript-la-8956c.firebaseapp.com",
-      databaseURL: "https://web-design-javascript-la-8956c-default-rtdb.asia-southeast1.firebasedatabase.app",
-      projectId: "web-design-javascript-la-8956c",
-      storageBucket: "web-design-javascript-la-8956c.appspot.com",
-      messagingSenderId: "546264166",
-      appId: "1:546264166:web:a945688206bfb05ef7c9a7",
-      measurementId: "G-FJBQL9J5TC"
-    };
+        apiKey: "AIzaSyDaNodIyIVDsYtte9_kOLYSHYM9sanl-5Y",
+        authDomain: "magic-css.firebaseapp.com",
+        projectId: "magic-css",
+        storageBucket: "magic-css.appspot.com",
+        messagingSenderId: "588079390898",
+        appId: "1:588079390898:web:4a15bff74aa43115caa9ab",
+        measurementId: "G-P6DT5CKPTS"
+        };
     firebase.initializeApp(firebaseConfig);
       </script>
       <script type="text/javascript" src="app.js"></script>

@@ -75,3 +75,10 @@ label{
     color: #fff;
 }
 
+#btnsub{
+    padding: 5px 8px;
+    border-radius: 8px;
+    background-color: pink;
+    cursor: pointer;
+}
+

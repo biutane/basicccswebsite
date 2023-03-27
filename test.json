@@ -1,0 +1,7 @@
+{
+    "Selectors" : {
+      "1" : [
+        ".plate{color:pink;}"
+      ]
+    }
+}

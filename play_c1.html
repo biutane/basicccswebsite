@@ -24,14 +24,17 @@
             <div class="css-code">
                 <label>CSS</label>
                 <textarea id="css-code" onkeyup="runcode()"></textarea>
+                <input type="text" id="cssans" ></input>
             </div>
+            <button id="btnsub">Submit</button>
         </div>
         <div class="preview">
             <iframe id="output"></iframe>
         </div>
-        <div class="time">
+        <!-- <div class="time">
             <h1 id="timer">00:00</h1>
-        </div>
+        </div> -->
+        
     </div>
     <script>
         function runcode(){
@@ -52,32 +55,66 @@
         }
 
         //time//
-        let timeSecond = 120;
-        const timeH = document.querySelector("#timer");
+        // let timeSecond = 120;
+        // const timeH = document.querySelector("#timer");
 
-        displayTime(timeSecond);
+        // displayTime(timeSecond);
 
-        const countDown = setInterval(() => {
-        timeSecond--;
-        displayTime(timeSecond);
-        if (timeSecond == 0 || timeSecond < 1) {
-            endCount();
-            clearInterval(countDown);
+        // const countDown = setInterval(() => {
+        // timeSecond--;
+        // displayTime(timeSecond);
+        // if (timeSecond == 0 || timeSecond < 1) {
+        //     endCount();
+        //     clearInterval(countDown);
+        // }
+        // }, 1000);
+
+        // function displayTime(second) {
+        // const min = Math.floor(second / 60);
+        // const sec = Math.floor(second % 60);
+        // timeH.innerHTML = `
+        // ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
+        // `;
+        // }
+
+        // function endCount() {
+        // timeH.innerHTML = "Time out";
+        // }
+
+
+
+    const txtcss = cssans.getAttribute("id");
+    const txtcss2 = txtcss.value;
+    // const txtcss = document.getElementById('cssans');
+    const btnans = document.getElementById('btnsub');
+    const mode = "Selectors";
+    const order = "1";
+    
+    btnans.addEventListener('click',checkans);
+    console.log(txtcss)
+    console.log(txtcss2)
+ 
+    //check
+    function checkans(){
+    fetch('./test.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        console.log(data[mode][order])
+        const allans = data[mode][order]
+        let txtIndex = []
+        if(txtcss.value==allans[txtIndex]){
+            console.log(allans[txtIndex])
+            alert("correct!!");
         }
-        }, 1000);
-
-        function displayTime(second) {
-        const min = Math.floor(second / 60);
-        const sec = Math.floor(second % 60);
-        timeH.innerHTML = `
-        ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
-        `;
+        else{
+            alert("Incorrect!!");
         }
-
-        function endCount() {
-        timeH.innerHTML = "Time out";
-        }
+    });
+    }
     </script>
+
+    
 
 </body>
 </html>

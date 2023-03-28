@@ -16,105 +16,66 @@
 <body>
     <div class="container">
         <div class="code">
-            <div class="hint"></div>
-            <div class="html-code">
+            <div class="intro">
+                <h1 id="head">Flexbox</h1>
+                <p id="question">มาช่วยเจ้าหมีกลับไปหาเจ้าของที่เตียงนอนกัน โดยคุณสามารถใช้ <span class="help">align-items</span> <br>เป็นคำสั่งที่จะช่วยจัดเรียง items ในแนวตั้ง</p>
+                <ul>
+                    <li><span class="help">flex-start</span>: เรียง items ไปไว้ด้านบนของ container</li>
+                    <li><span class="help">flex-end</span>: เรียง items ไปไว้ด้านล่างของ container</li>
+                    <li><span class="help">center</span>: เรียง items ไปไว้ตรงกลางในแนวตั้งของ container</li>
+                </ul>
+            </div>
+            <!-- <div class="html-code">
                 <label>HTML</label>
-                <textarea id="html-code" onkeyup="runcode()"></textarea>
+                <div id="html-code"></div>
+            </div> -->
+            <div id="editor">
+                <div id="csscode">
+                    <div class="line-num">
+                        1<br>
+                        2<br>
+                        3<br>
+                        4<br>
+                        5<br>
+                        6<br>
+                        7<br>
+                        8<br>
+                        9<br>
+                        10<br>
+                    </div>
+                    <p id="before">#bear {<br>
+                        &nbsp;&nbsp;display: flex;</p>
+                    <textarea id="csstxt"></textarea>
+                    <p id="after">}</p>
+                    <button id="btnsub">Submit</button>
+                </div>
+                <!-- <input type="text" id="cssans" ></input> -->
+                
             </div>
-            <div class="css-code">
-                <label>CSS</label>
-                <textarea id="css-code" onkeyup="runcode()"></textarea>
-                <input type="text" id="cssans" ></input>
-            </div>
-            <button id="btnsub">Submit</button>
+<!--             
+            <div id="show"></div> -->
         </div>
         <div class="preview">
-            <iframe id="output"></iframe>
+            <div id="bear">
+                <div class="bear1"><img src="https://cdn.discordapp.com/attachments/942982244946022433/1090037278182752326/b930f8320c1554af3fc7d2bb7bab3f17-old-teddy-bear-illustration.png" width ="100%">
+                </div>
+            </div>
+            <div id='bed'>
+                <div class="bed1"><img src="https://cdn.discordapp.com/attachments/942982244946022433/1090038673984200734/248-2484530_bedroom-cartoon-household-goods-cartoon-bed-transparent.png" width ="100%">
+                </div>
+            </div>
+                  
+                
+                
         </div>
+              
+            <!-- <iframe id="output"></iframe> -->
+    </div>
         <!-- <div class="time">
             <h1 id="timer">00:00</h1>
         </div> -->
         
-    </div>
-    <script>
-        function runcode(){
-            let htmlCode = document.getElementById("html-code").value;
-            let cssCode = document.getElementById("css-code").value;
-            let output = document.getElementById("output");
-            output.contentDocument.body.innerHTML = htmlCode+"<style>"+cssCode+"</style>";
-
-
-            // let output = document.querySelector("#output").contentWindow.document;
-            // output.open();
-            // output.write(htmlCode+cssCode);
-            // output.close();
-        
-            // document.querySelector("#html-code").addEventListener("keyup", runcode);
-            // document.querySelector("#css-code").addEventListener("keyup", runcode);
-   
-        }
-
-        //time//
-        // let timeSecond = 120;
-        // const timeH = document.querySelector("#timer");
-
-        // displayTime(timeSecond);
-
-        // const countDown = setInterval(() => {
-        // timeSecond--;
-        // displayTime(timeSecond);
-        // if (timeSecond == 0 || timeSecond < 1) {
-        //     endCount();
-        //     clearInterval(countDown);
-        // }
-        // }, 1000);
-
-        // function displayTime(second) {
-        // const min = Math.floor(second / 60);
-        // const sec = Math.floor(second % 60);
-        // timeH.innerHTML = `
-        // ${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}
-        // `;
-        // }
-
-        // function endCount() {
-        // timeH.innerHTML = "Time out";
-        // }
-
-
-
-    const txtcss = cssans.getAttribute("id");
-    const txtcss2 = txtcss.value;
-    // const txtcss = document.getElementById('cssans');
-    const btnans = document.getElementById('btnsub');
-    const mode = "Selectors";
-    const order = "1";
-    
-    btnans.addEventListener('click',checkans);
-    console.log(txtcss)
-    console.log(txtcss2)
- 
-    //check
-    function checkans(){
-    fetch('./test.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-        console.log(data[mode][order])
-        const allans = data[mode][order]
-        let txtIndex = []
-        if(txtcss.value==allans[txtIndex]){
-            console.log(allans[txtIndex])
-            alert("correct!!");
-        }
-        else{
-            alert("Incorrect!!");
-        }
-    });
-    }
-    </script>
-
-    
+<script type="text/javascript" src="play_c1.js"></script>
 
 </body>
 </html>

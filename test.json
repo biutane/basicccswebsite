@@ -1,7 +1,5 @@
 {
     "Selectors" : {
-      "1" : [
-        ".plate{color:pink;}"
-      ]
+      "1" :[ "align-items:flex-end;", "<div class='dog'>sdasd</div>"]
     }
 }

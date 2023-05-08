@@ -1,3 +1,96 @@
+const queryString = window.location.search;
+console.log(queryString);
+
+const urlParams = new URLSearchParams(queryString);
+
+const allmode = urlParams.get('allmode')
+console.log(allmode);
+
+
+
+let dataf = "";
+let num = 1;
+
+
+console.log(dataf[urlParams.get("allmode")]);
+
+let questionNumber = 1;
+const showintro = document.querySelector(".intro");
+console.log(showintro)
+
+const showcode = document.querySelector(".areacode");
+console.log('intro_'+ allmode + questionNumber)
+const showpre = document.querySelector(".preview");
+const showpreans = document.querySelector(".preview");
+
+document.getElementById('intro_'+ allmode + num).style["display"] = 'block';
+console.log('intro_'+ allmode + num)
+document.getElementById('pre_'+ allmode + num).style["display"] = 'block';
+document.getElementById('area_'+ allmode + num).style["display"] = 'block';
+
+
+
+
+const txtcss = document.querySelector('#txt_' + allmode + num).value;
+console.log('#txt_' + allmode + num)
+
+
+
+// const txtcss2 = txtcss.value;
+
+// console.log(txtcss.value)
+const btnans = document.querySelector('#btnsub');
+
+btnans.addEventListener('click',checkans);
+function showQuestion(){
+    console.log('#area_'+ allmode + questionNumber + ', textarea')
+    // console.log(clearans)
+    document.getElementById('btnsub').style["opacity"] = '1';
+    document.getElementById('btnnext').style["opacity"] = '0.5';
+    // console.log(document.getElementById('btnnext').style["opacity"])
+    document.getElementById('intro_'+ allmode + questionNumber).style["display"] = 'none';
+    document.getElementById('area_'+ allmode + questionNumber).style["display"] = 'none';
+    console.log('area_'+ allmode + questionNumber)
+    document.getElementById('preans_'+ allmode + questionNumber).style["display"] = 'none';
+    
+    
+   
+    
+    // showintro.innerHTML = dataf[urlParams.get("allmode")][questionNumber]
+    // showcode.innerHTML = dataf[urlParams.get("allmode")][questionNumber]
+    // showpre.innerHTML = dataf[urlParams.get("allmode")][questionNumber]
+    // showpreans.innerHTML = dataf[urlParams.get("allmode")][questionNumber]
+
+    console.log('intro_'+ allmode + (questionNumber+1))
+    document.getElementById('intro_'+ allmode + (questionNumber+1)).style["display"] = 'block';
+    console.log(document.getElementById('intro_'+ allmode + (questionNumber+1)).style["display"])
+    document.getElementById('area_'+ allmode + (questionNumber+1)).style["display"] = 'block';
+    document.getElementById('pre_'+ allmode + (questionNumber+1)).style["display"] = 'block';
+
+    // showintro.innerHTML = dataf[urlParams.get("allmode")][questionNumber+1]
+    // showcode.innerHTML = dataf[urlParams.get("allmode")][questionNumber+1]
+    // showpre.innerHTML = dataf[urlParams.get("allmode")][questionNumber+1]
+    // showpreans.innerHTML = dataf[urlParams.get("allmode")][questionNumber+1]
+
+   
+}
+
+
+const btnNext = document.querySelector("#btnnext");
+// console.log(clearans)
+
+// let clearans = document.querySelector('#txt_'+ allmode + questionNumber);
+
+btnNext.addEventListener("click", (event) => {
+    // clearans.value = '';
+    // console.log(clearans.value)
+    showQuestion();
+    questionNumber += 1;
+
+});
+
+
+
 
 // function runcode(){
 //     let cssCode = document.getElementById("csstxt").value;
@@ -62,7 +155,7 @@
 // }
 
 
-// var p = document.createElement('p')
+// let p = document.createElement('p')
 //     p.innerHTML = "_"
 //     css-code.appendChild(p)
 
@@ -71,54 +164,190 @@
 
 
 // const txtcss2 = txtcss.value;
-const txtcss = document.getElementById('csstxt');
-// const txtcss2 = txtcss.value;
 
-console.log(txtcss.value)
-const btnans = document.getElementById('btnsub');
-
-btnans.addEventListener('click',checkans);
+// btnNext.addEventListener('click',nextques);
+// const btnNext = document.getElementById('btnnext');
 // console.log(txtcss)
 // console.log(txtcss2)
 
-function checkans(){
-const mode = "Selectors";
-const order = "1";
-fetch('./test.json')
-.then(response => response.json())
-.then(data => {
-    console.log(data)
-    console.log(data[mode][order][0])
-    const allans = data[mode][order][0]
-    // let txtIndex = []
-    c = ""
-    v = ""
-    p = 0
-    for(let i = 0; i<(allans).length;i++){
-        c += allans[i];
-        // console.log(allans[i])
-    }
-    for(let i = 0; i<txtcss.value.length;i++){
-        v += txtcss.value[i];
-        // p += i
-        // console.log(p)
-        // console.log(v)
-    }
-    if(c.toLowerCase().replace(/\s/g,'') === v.toLowerCase().replace(/\s/g,'')){
-        alert("ยินดีด้วย คุณช่วยเจ้าหมีได้สำเร็จ")
-        document.getElementById('bear').style["align-items"] = 'flex-end';
-        document.getElementById('btnsub').style["opacity"] = '1';
 
-    }
-    else if(!txtcss.value){
-        document.getElementById('editor').style["align-items"] = 'flex-end';
-        alert("คุณยังไม่ได้กรอกข้อมูล")
-    }
-    else{
-        alert("คุณตอบคำถามไม่ถูกต้อง ลองใหม่อีกครั้งนะ")
-    } 
-})
+// let txtrea = ""
+// txtcss.addEventListener("keyup", () =>{
+//     console.log(txtcss.value)
+//     txtrea += txtcss.value;
+// });
+
+
+
+
+
+function checkans(){
+    const mode = allmode;
+    const checktxt = txtcss;
+    console.log(checkans)
+    fetch('./test.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        console.log(data[mode])
+        console.log(data[mode][num])
+        const allans = data[mode][num];
+        dataf = data[mode];
+
+        let c = "";
+        let v = "";
+        // let qnum = "intro_flex";
+        // let area = "area_flex";
+        // let preans1 = "pre_flex";
+        // let preans2 = "preans_flex";
+        let fspace = /\s/g;
+        for(let i = 0; i<(allans).length;i++){
+            c += allans[i];
+            console.log(c)
+            // console.log(allans[i])
+        }
+        for(let i = 0; i<checktxt.value.length;i++){
+            v += checktxt.value[i];
+            console.log(v)
+            // p += i
+            // console.log(p)
+            // console.log(v)
+        }
+        // for(let i = 0; i<16;i++){
+        //     let txti =  i.toString();
+        //     qnum += txti;
+        //     area += txti;
+        //     preans1 += txti;
+        //     preans2 += txti;
+        // }
+            
+        // btnNext.disabled = true;
+        if(c.toLowerCase().replace(/\s/g,'') == v.toLowerCase().replace(/\s/g,'')){
+            // alert("ยินดีด้วย คุณช่วยเจ้าหมีได้สำเร็จ")
+            btnNext.disabled = false;
+            document.getElementById('btnnext')
+            document.getElementById('btnsub').style["opacity"] = '1';
+            document.getElementById('pre_'+ allmode + num).style["display"] = 'none';
+            document.getElementById('preans_'+ allmode + num).style["display"] = 'block';
+            document.getElementById('btnnext').style["opacity"] = '1';
+            
+
+            num += 1;
+            console.log(num) 
+            document.getElementById('btnsub').style["opacity"] = '0';
+            
+            
+        }
+        else if(!checktxt.value){
+            // btnNext.disabled = true;
+            // btnans.disabled = true;
+     
+            alert("คุณยังไม่ได้กรอกข้อมูล")
+        }
+        else{
+            // btnNext.disabled = true;
+            // btnans.disabled = true;
+            // btnNext.disabled = true;
+            alert("คุณตอบคำถามไม่ถูกต้อง ลองใหม่อีกครั้งนะ")
+        } 
+        
+    })
 }
+
+function nextques(){
+    
+}
+
+
+// let questionNumber = 0;
+//     const showintro = document.querySelector(".intro");
+//     const showcode = document.querySelector(".csscode");
+//     const showpre = document.querySelector(".preview");
+//     const showpreans = document.querySelector(".preview");
+// showQuestion();
+
+// function showQuestion(){
+//     document.getElementById('btnsub').style["display"] = '0';
+//     document.getElementById('pre_flex' + num).style["display"] = 'none';
+//     document.getElementById('preans_flex' + num).style["display"] = 'block';
+//     document.getElementById('btnnext').style["display"] = 'block';
+//     containerEl.innerHTML = questions[questionNumber].name;
+//     const showintro = document.querySelector(".intro");
+//     const showcode = document.querySelector(".csscode");
+//     const showpre = document.querySelector(".preview");
+//     const showpreans = document.querySelector(".preview");
+
+// }
+
+// const btnNext = document.querySelector("#btnNext");
+// btnNext.addEventListener("click", (event) => {
+//     questionNumber += 1;
+//     showQuestion()
+// })
+
+
+
+
+// function CheckCssUpgrade(){
+//     const cssInputs = cssUserEl.value.split("\n");
+//     console.log(cssInputs);
+
+//     let cssAnswers = ["text-align:center"];
+//     cssInputs.forEach((input, index) => {
+//         console.log(input);
+//         let cssUserSplit = input.split(":")
+//         console.log(cssUserSplit);
+//         let cssKey = cssUserSplit[0].trim();
+//         let cssValue = cssUserSplit[1].replace(";", "").trim();
+//         console.log(cssKey, cssValue);
+
+
+//         if (cssKey == cssAnswers[index].split(":")[0] &&  cssValue == cssAnswers[index].split(":")[1])
+//         {
+//             console.log("YES!");
+//         }
+//         else{
+//             console.log("NO!");
+//         }
+//     })
+// }
+
+
+
+
+
+
+// let queryString = window.location.search;
+// console.log(queryString);
+// let query = new URLSearchParams(queryString);
+// console.log(query.get("mode"));
+
+// console.log(questions[query.get("mode")]);
+
+// let questionNumber = 1;
+// const showintro = document.querySelector(".intro");
+// const showcode = document.querySelector(".csscode");
+// const showpre = document.querySelector(".preview");
+// const showpreans = document.querySelector(".preview");
+
+// showQuestion();
+
+// function showQuestion(){
+//     console.log("container-" + questionNumber);
+//     console.log("box-" + questionNumber);
+//     console.log("prefix-" + questionNumber);
+//     containerEl.innerHTML = questions[query.get("mode")][questionNumber].name;
+// }
+
+// const btnNext = document.querySelector("#btnNext");
+// btnNext.addEventListener("click", (event) => {
+//     questionNumber += 1;
+//     showQuestion()
+// })
+
+
+
+
 
 
 
@@ -130,13 +359,13 @@ fetch('./test.json')
 // else{
 //     alert("Incorrect!!");
 // }
-// var datastr = data.val();
-// var ans = datastr.ans;
+// let datastr = data.val();
+// let ans = datastr.ans;
 // // console.log(datastr.img)
 // test = ans
 // // console.log(ansfill.hasChildNodes())
 // for(let i = 0; i<ans.length;i++){
-//     var p = document.createElement('p')
+//     let p = document.createElement('p')
 //     p.innerHTML = "_"
 //     css-code.appendChild(p)
 // }
@@ -157,7 +386,7 @@ fetch('./test.json')
 // }
 // };
 
-//     var test = ""
+//     let test = ""
 //     $("#btnsub").click(() => {
 //     // console.log(test)
 //     const useranswer = document.getElementById('cssans').value

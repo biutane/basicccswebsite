@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="waiting.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 </head>
 <body>
     <nav>
@@ -20,6 +24,8 @@
         </div>
     </nav>
     <div class="content">
+        <div style="color: white;">Category : <span id="categoryRoom">[CATEGORY]</span></div>
+        <div style="color: white; font-size: 48px;">Code : <span id="codeRoom">[CODE ROOM]</span></div>
         <div class="row match">
             <div class="col-lg-4 col-sm-12 col-md-4 playerone">
                 <div class="pic" id="pic-profile">
@@ -57,5 +63,8 @@
             <button class="btnstart" id="btn-startgame">Start</button>
         </div>
     </div>
+    
+    <script src="firebaseConfig.js"></script>
+    <script src="waiting.js"></script>
 </body>
 </html>

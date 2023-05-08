@@ -1,5 +1,8 @@
 {
-    "Selectors" : {
-      "1" :[ "align-items:flex-end;", "<div class='dog'>sdasd</div>"]
+    "flexbox" : {
+      "1" : "align-items:flex-end;",
+      "2" : "dsweqweqwewe",
+      "3" : "align-text:center;"
+      
     }
 }

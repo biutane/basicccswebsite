@@ -8,3 +8,38 @@ body{
     background-size: 100%;
     margin: 0;
 }
+
+
+.head{
+    text-align: center;
+    padding: 0px 30px;
+}
+
+.mode{
+    text-align: center;
+    padding: 0px 30px;
+}
+
+.mode img{
+    text-align: center;
+    padding: 0px 30px;
+    cursor: pointer;
+}
+
+#backmenu{
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+    padding: 0px 30px;
+    border-radius: 8px;
+    background-color: #B355F2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5em;
+    bottom: 1em;
+    padding-top: 0.3em;
+}
+
+

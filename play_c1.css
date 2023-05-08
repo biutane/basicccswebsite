@@ -30,7 +30,7 @@ body{
     padding: 10px;
 }
 
-#csstxt{
+.csstxt{
     font-size: 16px;
     color: #1d1e22;
     margin-left: 16px;
@@ -87,7 +87,24 @@ label{
     font-size: 18px;
     padding: 5px 8px;
     border-radius: 8px;
-    background-color: #CF8BFC;
+    background-color: #B355F2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5em;
+    bottom: 1em;
+    padding-top: 0.3em;
+    opacity: 1;
+}
+
+#btnnext{
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+    padding: 5px 8px;
+    border-radius: 8px;
+    background-color: black;
     border: none;
     outline: none;
     cursor: pointer;
@@ -222,3 +239,34 @@ span{
     background-color: rgba(255, 255, 255, 0.2);
     font-weight: 800;
 }
+
+#intro_flexbox1,
+#intro_flexbox2,
+#intro_flexbox3{
+    display: none;
+    
+}
+
+#area_flexbox1, 
+#area_flexbox2,
+#area_flexbox3{
+    display: none;
+}
+
+#pre_flexbox1,
+#pre_flexbox2,
+#pre_flexbox3{
+    display: none;
+}
+
+#preans_flexbox1 #bear{
+    align-items: flex-end;
+}
+
+
+#preans_flexbox1,
+#preans_flexbox2,
+#preans_flexbox3{
+    display: none;
+}
+

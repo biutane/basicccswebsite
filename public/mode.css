@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body{
+    background-image: url("pic/bg.png");
+    font-family: 'Kanit', sans-serif;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0;
+}
+
+
+.head{
+    text-align: center;
+    padding: 0px 30px;
+}
+
+.mode{
+    text-align: center;
+    padding: 0px 30px;
+}
+
+.mode img{
+    text-align: center;
+    padding: 0px 30px;
+    cursor: pointer;
+}
+
+#backmenu{
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+    padding: 0px 30px;
+    border-radius: 8px;
+    background-color: #B355F2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5em;
+    bottom: 1em;
+    padding-top: 0.3em;
+}
+
+
+
+.btnback{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2.8vw;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 5;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+.btnback a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.username p{
+    font-size: 15pt;
+    margin: 10;
+    color: black;
+    background-color: #E7BD4F;
+    text-shadow: 0px 0px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px 50px;
+}
+
+.user{
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.profile{
+    width: 20vw;
+    height: 20vw;
+    background-color: #F9F9F9;
+    border-radius: 40px;
+    border: 10px solid #E1D5F4;
+    margin: 2vw;
+    display: flex;
+    /* width: 100%; */
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+#profile-name{
+    background-color: #FDE6B0;
+    border: 3px solid #FFDB84;
+    color: #A234ED;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    font-family: 'Kanit', sans-serif;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+
+.btnback{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2.8vw;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 5;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+
+.btnback a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+@media only screen and (max-width: 800px){
+    .vs{
+        font-size: 40pt;
+        margin: 10px 0;
+    }
+    nav{
+        height: 5%;
+    }
+    .logo img{
+        width: 100px;
+    }
+    /* .content{
+        padding-top: 10vw;
+    } */
+    .playerone .pic img{
+        width: 100px !important;
+    }
+    .playertwo .pic img{
+        width: 100px !important;
+    }
+    .buttonjoin{
+        padding-top: 0%;
+    }
+    .ready {
+        font-size: 14pt;
+        padding: 12px 0 12px 0;
+    }
+    .btnstart {
+        font-size: 18pt;
+    }
+    .username-x div {
+        font-size: 12pt;
+        width: 120px;
+        padding: 0;
+    }
+    .username-o div {
+        font-size: 12pt;
+        width: 120px;
+        padding: 0;
+    }
+    .btncancel-o{
+        font-size: 10pt;
+        padding: 6px 30px;
+    }
+    .btncancel-x{
+        font-size: 10pt;
+        padding: 6px 30px;
+    }
+    .btnjoin-o{
+        font-size: 10pt;
+        padding: 6px 30px;
+    }
+    .btnjoin-x{
+        font-size: 10pt;
+        padding: 6px 30px;
+    }
+    .btnstart{
+        margin: 10px 2px;
+    }
+    .popuocode {
+        height: 30vw;
+        border-radius: 20px;
+        border: #E7BD4F solid 4px;
+    }
+    .popuocodename {
+        width: 20vw;
+        height: 9vw;
+        margin-top: -18px;
+        font-size: 6vw;
+    }
+    .popup-content {
+        padding-left: 0vw;
+    }
+    .code {
+        height: 40vw;
+        width: 45vw;
+        font-size: 9vw;
+    }
+    .closepopupcode img {
+        width: 5vw;
+    }
+}
+
+nav {
+    /* Navbar */
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+  }
+
+
+.content{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content p{
+    color: #E7BD4F;
+    text-shadow: 1px 1px black;
+    font-size: 20pt;
+}
+

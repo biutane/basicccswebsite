@@ -226,36 +226,84 @@ label{
 
 ul{
     padding: 0px 90px;
-    font-size: 16px;
     color: #fff;
 }
 
 .help{
     cursor: pointer;
-    border-bottom: 1px solid #fff
-}
-
-span{
+    border-bottom: 1px solid #fff;
     background-color: rgba(255, 255, 255, 0.2);
     font-weight: 800;
 }
 
+
 #intro_flexbox1,
 #intro_flexbox2,
-#intro_flexbox3{
+#intro_flexbox3,
+#intro_flexbox4,
+#intro_flexbox5,
+#intro_flexbox6,
+#intro_flexbox7,
+#intro_flexbox8,
+#intro_flexbox9,
+#intro_flexbox10,
+#intro_flexbox11,
+#intro_flexbox12,
+#intro_flexbox13,
+#intro_flexbox14,
+#intro_flexbox15,
+#intro_flexbox16,
+#intro_flexbox17,
+#intro_flexbox18,
+#intro_flexbox19,
+#intro_flexbox20{
     display: none;
     
 }
 
-#area_flexbox1, 
+#area_flexbox1,
 #area_flexbox2,
-#area_flexbox3{
+#area_flexbox3,
+#area_flexbox4,
+#area_flexbox5,
+#area_flexbox6,
+#area_flexbox7,
+#area_flexbox8,
+#area_flexbox9,
+#area_flexbox10,
+#area_flexbox11,
+#area_flexbox12,
+#area_flexbox13,
+#area_flexbox14,
+#area_flexbox15,
+#area_flexbox16,
+#area_flexbox17,
+#area_flexbox18,
+#area_flexbox19,
+#area_flexbox20{
     display: none;
 }
 
 #pre_flexbox1,
 #pre_flexbox2,
-#pre_flexbox3{
+#pre_flexbox3,
+#pre_flexbox4,
+#pre_flexbox5,
+#pre_flexbox6,
+#pre_flexbox7,
+#pre_flexbox8,
+#pre_flexbox9,
+#pre_flexbox10,
+#pre_flexbox11,
+#pre_flexbox12,
+#pre_flexbox13,
+#pre_flexbox14,
+#pre_flexbox15,
+#pre_flexbox16,
+#pre_flexbox17,
+#pre_flexbox18,
+#pre_flexbox19,
+#pre_flexbox20{
     display: none;
 }
 
@@ -269,7 +317,33 @@ span{
 
 #preans_flexbox1,
 #preans_flexbox2,
-#preans_flexbox3{
+#preans_flexbox3,
+#preans_flexbox4,
+#preans_flexbox5,
+#preans_flexbox6,
+#preans_flexbox7,
+#preans_flexbox8,
+#preans_flexbox9,
+#preans_flexbox10,
+#preans_flexbox11,
+#preans_flexbox12,
+#preans_flexbox13,
+#preans_flexbox14,
+#preans_flexbox15,
+#preans_flexbox16,
+#preans_flexbox17,
+#preans_flexbox18,
+#preans_flexbox19,
+#preans_flexbox20{
     display: none;
 }
 
+.bgflexbox{
+    background: url(./pic/river.png) no-repeat center center fixed;
+}
+
+
+.flexbox li,
+.grid li {
+    font-size: 14px;
+}

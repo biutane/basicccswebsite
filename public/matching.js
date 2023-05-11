@@ -8,7 +8,7 @@ let selectCategory = "";
 categoryModes.forEach((category) => {
     category.addEventListener("click", (event) => {
         selectCategory = event.currentTarget.alt;
-        header.innerHTML = `Selected : ${selectCategory}`;
+        // header.innerHTML = `Selected : ${selectCategory}`;
         CreateRoom()
     })
 })
@@ -54,6 +54,8 @@ function CreateRoom(){
         }
     })
 }
+
+
 
 // function QuickJoin(){
 //     if (selectCategory == "") return;

@@ -10,7 +10,7 @@ body{
 header{
     background-color: #343A40;
     position: fixed;
-    width: 100%;
+    width: 100%
     /* padding: 10px 0 10px 0; */
 }
 .logohead{
@@ -31,7 +31,7 @@ header{
     /* display: flex; */
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 100%
 }
 .logo1 img{
     width: 25rem;

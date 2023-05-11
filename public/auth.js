@@ -1,6 +1,8 @@
 const loginbtn = document.querySelector(".loginbtn");
 loginbtn.addEventListener('click', loginUser)
 
+const usersRef = firebase.database().ref("users")
+
 
 firebase.auth().onAuthStateChanged((user) => {
     console.log('User: ', user);
@@ -21,8 +23,13 @@ function loginUser(event){
     .then((result) => {
         var credential = result.credential;
         var token = credential.accessToken;
-        var user = result.user;
-        user = JSON.parse(result.user)
+        const user = result.user;
+        // user = JSON.parse(result.user)
+        console.log(user);
+        usersRef.child(user.uid).update({
+            displayName: user.displayName,
+            photoURL: user.photoURL
+        })
         // if( user){
         //     window.location.href = "./menu.html"
         // }

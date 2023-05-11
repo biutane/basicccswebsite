@@ -3,31 +3,115 @@ console.log(queryString);
 
 const urlParams = new URLSearchParams(queryString);
 
-const allmode = urlParams.get('allmode')
+const codeRoom = urlParams.get('code')
+let allmode = urlParams.get('allmode')
 console.log(allmode);
 
-
+let maxQuestion = 0; 
 
 let dataf = "";
 let num = 1;
 
+const roomsRef = firebase.database().ref("rooms");
+let playerNumber;
+
+roomsRef.child(codeRoom).on("value", (snapshot) => {
+    const roomInfo = snapshot.val();
+    console.log(roomInfo.status);
+    if (roomInfo.status == "finish") {
+        document.querySelector(".result-win").classList.remove("d-none");
+        setTimeout(() => {
+            window.location.href = `result.html?code=${codeRoom}`;
+        }, 1000)
+    }
+
+    console.log(roomInfo);
+    allmode = roomInfo.category;
+
+    const currentUser = firebase.auth().currentUser;
+    
+    if (roomInfo.uid1 == currentUser.uid) {
+        playerNumber = "uid1";
+    } else if (roomInfo.uid2 == currentUser.uid) {
+        playerNumber = "uid2";
+    }
+
+    setupUI(roomInfo);
+})
+
+
+let txtcss;
+function setupUI(roomInfo){
+    document.querySelector('#pre_'+ allmode + num).style["display"] = 'block';
+    document.querySelector('#area_'+ allmode + num).style["display"] = 'block';
+    document.querySelector('.preview_' + allmode).style["display"] = 'block';
+    // console.log('#intro_'+ allmode + num)
+    document.querySelector('#intro_'+ allmode + num).style["display"] = 'block';
+    // console.log('#intro_'+ allmode + num)
+   
+    
+    txtcss = document.querySelector('#txt_' + roomInfo.category + num);
+    console.log(txtcss.value)
+    
+    // showQuestion();
+    txtcss.addEventListener('input', function handleChange(event) {
+        console.log(event.target.value);
+      });
+}
 
 console.log(dataf[urlParams.get("allmode")]);
 
-let questionNumber = 1;
-const showintro = document.querySelector(".intro");
-console.log(showintro)
+// let questionNumber = 1;
+// const showintro = document.querySelector(".intro");
+// console.log(showintro)
 
-const showcode = document.querySelector(".areacode");
-console.log('#intro_'+ allmode + questionNumber)
-const showpre = document.querySelector(".preview");
-const showpreans = document.querySelector(".preview");
+// const showcode = document.querySelector(".areacode");
+// console.log('#intro_'+ allmode + questionNumber)
 
-document.querySelector('#intro_'+ allmode + num).style["display"] = 'block';
-console.log('#intro_'+ allmode + num)
-document.querySelector('#pre_'+ allmode + num).style["display"] = 'block';
-document.querySelector('#area_'+ allmode + num).style["display"] = 'block';
+// const showpreans = document.querySelector(".preview");
 
+
+
+// const showpre = document.querySelector(".preview");
+
+
+// const codeRoomEl = document.querySelector("#codeRoom");
+// codeRoomEl.innerHTML = codeRoom;
+
+
+// document.querySelector("#profile-image").innerHTML = `<img src='${user.photoURL}' width='40px' height='40px' style="border-radius: 50%">`
+//         profileName = document.querySelector("#profile-name").innerHTML = user.displayName
+
+// function setupUI(user) {
+//     if (user) {
+//         document.querySelector("#profile-image").innerHTML = `<img src='${user.photoURL}' width='40px' height='40px' style="border-radius: 50%">`
+//         profileName = document.querySelector("#profile-name").innerHTML = user.displayName
+//         loginItems.forEach((item) => { 
+//             item.style.display = 'flex' 
+//         })
+//         logoutItems.forEach((item) => { 
+//             item.style.display = 'none' 
+//         })
+//     } else {
+//         loginItems.forEach((item) => { 
+//             item.style.display = 'none' 
+//         })
+//         logoutItems.forEach((item) => { 
+//             item.style.display = 'flex' 
+//         })
+//     }
+// }
+
+
+
+// if (allmode){
+//     document.querySelector('.preview_' + allmode).style["display"] = 'block';
+//     console.log('#intro_'+ allmode + num)
+//     document.querySelector('#intro_'+ allmode + num).style["display"] = 'block';
+//     console.log('#intro_'+ allmode + num)
+//     document.querySelector('#pre_'+ allmode + num).style["display"] = 'block';
+//     document.querySelector('#area_'+ allmode + num).style["display"] = 'block';
+// } 
 
 
 
@@ -40,14 +124,14 @@ document.querySelector('#area_'+ allmode + num).style["display"] = 'block';
 // const txtcss2 = txtcss.value;
 
 
-let txtcss = document.querySelector('#txt_' + allmode + num);
-console.log(txtcss.value)
+// let txtcss = document.querySelector('#txt_' + allmode + num);
+// console.log(txtcss.value)
 
 
 
-txtcss.addEventListener('input', function handleChange(event) {
-    console.log(event.target.value);
-  });
+// txtcss.addEventListener('input', function handleChange(event) {
+//     console.log(event.target.value);
+//   });
 
 // console.log('hello ' + $('#txt_' + allmode + num).val())
 const btnans = document.querySelector('#btnsub');
@@ -64,47 +148,52 @@ const btnNext = document.querySelector("#btnnext");
 // console.log(clearans.value)
 
 btnNext.addEventListener("click", (event) => {
-    let clearans = document.querySelector('#txt_'+ allmode + questionNumber);
-    clearans.value ='';
-    console.log(clearans.value) 
-    txtcss = document.querySelector('#txt_'+ allmode + num);
-    console.log(txtcss.value) 
-    
-    // clearans.querySelector()
-    // clearans = txtcss.value;
-    showQuestion();
-    questionNumber += 1;
+    if (num >= maxQuestion) {
+        roomsRef.child(codeRoom).update({
+            status: "finish"
+        })
+    } else {
+        let clearans = document.querySelector('#txt_'+ allmode + num);
+        clearans.value ='';
+        console.log(clearans.value) 
+        // clearans.querySelector()
+        // clearans = txtcss.value;
+        num += 1;
+        showQuestion();
+        // questionNumber += 1;
+    }
+
 
 });
 
 
 function showQuestion(){
     // clearans.value = '';
-    console.log('#area_'+ allmode + questionNumber + ', textarea')
+    console.log('#area_'+ allmode + (num-1) + ', textarea')
     // console.log(clearans)
-    document.querySelector('#btnsub').style["opacity"] = '1';
-    document.querySelector('#btnnext').style["opacity"] = '0.5';
+    document.querySelector('#btnsub').style["display"] = 'none';
+    document.querySelector('#btnnext').style["display"] = 'none';
     // console.log(document.querySelector('#btnnext').style["opacity"])
-    document.querySelector('#intro_'+ allmode + questionNumber).style["display"] = 'none';
-    document.querySelector('#area_'+ allmode + questionNumber).style["display"] = 'none';
-    document.querySelector('#txt_'+ allmode + questionNumber).style["display"] = 'none';
-    console.log('#area_'+ allmode + questionNumber)
-    document.querySelector('#preans_'+ allmode + questionNumber).style["display"] = 'none';
+    document.querySelector('#intro_'+ allmode + (num-1)).style["display"] = 'none';
+    document.querySelector('#area_'+ allmode + (num-1)).style["display"] = 'none';
+    document.querySelector('#txt_'+ allmode + (num-1)).style["display"] = 'none';
+    console.log('#area_'+ allmode + (num-1))
+    document.querySelector('#preans_'+ allmode + (num-1)).style["display"] = 'none';
     
     
-   
     
     // showintro.innerHTML = dataf[urlParams.get("allmode")][questionNumber]
     // showcode.innerHTML = dataf[urlParams.get("allmode")][questionNumber]
     // showpre.innerHTML = dataf[urlParams.get("allmode")][questionNumber]
     // showpreans.innerHTML = dataf[urlParams.get("allmode")][questionNumber]
-
-    console.log('#intro_'+ allmode + (questionNumber+1))
-    document.querySelector('#intro_'+ allmode + (questionNumber+1)).style["display"] = 'block';
-    console.log(document.querySelector('#intro_'+ allmode + (questionNumber+1)).style["display"])
-    document.querySelector('#area_'+ allmode + (questionNumber+1)).style["display"] = 'block';
-    document.querySelector('#txt_'+ allmode +  (questionNumber+1)).style["display"] = 'block';
-    document.querySelector('#pre_'+ allmode + (questionNumber+1)).style["display"] = 'block';
+    
+    txtcss = document.querySelector('#txt_'+ allmode + num);
+    console.log('#intro_'+ allmode + (num))
+    document.querySelector('#intro_'+ allmode + (num)).style["display"] = 'block';
+    console.log(document.querySelector('#intro_'+ allmode + (num)).style["display"])
+    document.querySelector('#area_'+ allmode + (num)).style["display"] = 'block';
+    document.querySelector('#txt_'+ allmode +  (num)).style["display"] = 'block';
+    document.querySelector('#pre_'+ allmode + (num)).style["display"] = 'block';
 
     // showintro.innerHTML = dataf[urlParams.get("allmode")][questionNumber+1]
     // showcode.innerHTML = dataf[urlParams.get("allmode")][questionNumber+1]
@@ -126,8 +215,8 @@ function showQuestion(){
 function checkans(){
     const mode = allmode;
     const checktxt = txtcss;
-
-    console.log(checkans)
+    console.log(checktxt);
+    // console.log(checkans)
     fetch('./test.json')
     .then(response => response.json())
     .then(data => {
@@ -135,6 +224,8 @@ function checkans(){
         console.log(data[mode])
         console.log(data[mode][num])
         const allans = data[mode][num];
+        maxQuestion = data[mode]["max-question"];
+        console.log(maxQuestion);
         dataf = data[mode];
 
         let c = "";
@@ -166,22 +257,68 @@ function checkans(){
         // }
             
         // btnNext.disabled = true;
-        console.log('#txt_' + allmode + num)
-        console.log(txtcss.value)
+        // console.log('#txt_' + allmode + num)
+        const ansInput = document.querySelector(`#txt_${allmode}${num}`)
+        const ansUserList = ansInput.value.replace("\n", "").split(";")
+        console.log(ansUserList)
+        // console.log(txtcss.value)
+        console.log(allans);
 
+        let allAnsCheckArray = [...allans]
+        let countCorrect = 0;
+        ansUserList.forEach((ans) => {
+            const ansTrim = ans.trim().toLowerCase();
+            if (allAnsCheckArray.includes(ansTrim)) {
+                countCorrect += 1;
+                allAnsCheckArray = allAnsCheckArray.filter((ans) => ans != ansTrim)
+            }
+        })
 
-        if(c.toLowerCase().replace(/\s/g,'') == v.toLowerCase().replace(/\s/g,'')){
-            // alert("ยินดีด้วย คุณช่วยเจ้าหมีได้สำเร็จ")
+        console.log(allans.length);
+        console.log(countCorrect);
+
+        let userAnsLength = ansUserList.length;
+        if (ansUserList[ansUserList.length - 1] == "") {
+            userAnsLength -= 1;
+        }
+        console.log(userAnsLength);
+
+        
+        if (allans.length == countCorrect && userAnsLength == allans.length) {
+        // if(c.toLowerCase().replace(/\s/g,'') == v.toLowerCase().replace(/\s/g,'')){
+            document.querySelector('#pre_'+ allmode + num).style["display"] = 'none';
+            document.querySelector('#preans_'+ allmode + num).style["display"] = 'block';
+            document.querySelector('#btnnext').style["display"] = 'block';
+            alert("ยินดีด้วย คุณช่วยเจ้าหมีได้สำเร็จ")
             // btnNext.disabled = false;
-            document.querySelector('#btnsub').style["opacity"] = '1';
-            document.querySelector('#pre_'+ allmode + (num)).style["display"] = 'none';
-            document.querySelector('#preans_'+ allmode + (num)).style["display"] = 'block';
-            document.querySelector('#btnnext').style["opacity"] = '1';
+            
             
 
-            num += 1;
+            roomsRef.child(codeRoom).once("value", (snapshot) => {
+                const roomInfo = snapshot.val();
+                if (roomInfo[`${playerNumber}-score`]) {
+                    roomsRef.child(codeRoom).update({
+                        [`${playerNumber}-score`]: roomInfo[`${playerNumber}-score`] + 1
+                    })
+                } else {
+                    roomsRef.child(codeRoom).update({
+                        [`${playerNumber}-score`]: 1
+                    })
+                }
+
+                if (num == maxQuestion) {
+                    if (roomInfo.winner == null) {
+                        roomsRef.child(codeRoom).update({
+                            winner: playerNumber
+                        })
+                    }
+                    document.querySelector('#btnnext').innerHTML = "Finish";
+                }
+            })
+
+            // num += 1;
             console.log(num) 
-            document.querySelector('#btnsub').style["opacity"] = '0';
+            document.querySelector('#btnsub').style["display"] = 'none';
             // txtcss.value = '';
             
             

@@ -27,8 +27,10 @@ roomsRef.child(codeRoom).on("value", (snapshot) => {
 
 const categoryEl = document.querySelector("#categoryRoom");
 const btnStart = document.querySelector("#btn-startgame");
+
 function setRoomInfo(roomInfo){
     const currentUser = firebase.auth().currentUser;
+    
     if (roomInfo.uid1 == currentUser.uid) {
         playerNumber = "uid1";
     } else if (roomInfo.uid2 == currentUser.uid) {
@@ -138,7 +140,7 @@ function CancelMatching(){
     btnStart.innerHTML = "Start";
 }
 
-const btnBack = document.querySelector("#btnBack");
+const btnBack = document.querySelector("#backto");
 btnBack.addEventListener("click", () => {
     roomsRef.child(codeRoom).once("value", (snapshot) => {
         const room = snapshot.val();

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="result.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 </head>
 <body>
     <div class="content">
@@ -18,18 +22,7 @@
             <button class="btnmenu" id="btn-startgame">Back to Menu</button>
         </div>
     </div>
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyDaNodIyIVDsYtte9_kOLYSHYM9sanl-5Y",
-            authDomain: "magic-css.firebaseapp.com",
-            projectId: "magic-css",
-            storageBucket: "magic-css.appspot.com",
-            messagingSenderId: "588079390898",
-            appId: "1:588079390898:web:4a15bff74aa43115caa9ab",
-            measurementId: "G-P6DT5CKPTS"
-            };
-        
-        firebase.initializeApp(firebaseConfig);
-    </script>
+    <script src="firebaseConfig.js"></script>
+    <script src="result.js"></script>
 </body>
 </html>

@@ -25,7 +25,8 @@ body{
     display: flex;
 }
 
-.code, .preview{
+.code, .preview_flexbox,
+.preview_grid{
     flex-basis: 50%;
     padding: 10px;
 }
@@ -42,6 +43,20 @@ body{
     resize: none;
     overflow: auto;
     background-color: #fff;
+}
+
+
+.csstxt #txt_flexbox8,
+.csstxt #txt_flexbox9,
+.csstxt #txt_flexbox13,
+.csstxt #txt_flexbox14,
+.csstxt #txt_flexbox15,
+.csstxt #txt_flexbox17{
+    height: 50px;
+}
+
+.csstxt #txt_flexbox17{
+    height: 100px;
 }
 
 /* iframe{
@@ -92,10 +107,14 @@ label{
     outline: none;
     cursor: pointer;
     position: absolute;
-    right: 5em;
+    right: 1em;
     bottom: 1em;
     padding-top: 0.3em;
-    opacity: 1;
+    display: block;
+}
+
+#btnsub:hover{
+    background-color: #CF8BFC;
 }
 
 #btnnext{
@@ -104,7 +123,7 @@ label{
     font-size: 18px;
     padding: 5px 8px;
     border-radius: 8px;
-    background-color: black;
+    background-color: #DE4B92;
     border: none;
     outline: none;
     cursor: pointer;
@@ -112,17 +131,24 @@ label{
     right: 1em;
     bottom: 1em;
     padding-top: 0.3em;
-    opacity: 0.5;
+    display: none;
 }
 
-.preview {
+#btnnext:hover{
+    background-color: #F260B5;
+}
+
+.preview_flexbox,
+.preview_grid {
     position: sticky;
-    background-color:#1B1D2D;
+    /* background-image: url("pic/flexbox/river.png"); */
+    background-size: cover;
     margin-top: 20px;
     width: 80vw;
     height: 90vh;
     overflow: hidden;
     border-radius: 4px;
+    display: none;
 }
 
 #csscode{
@@ -307,12 +333,7 @@ ul{
     display: none;
 }
 
-#preans_flexbox1 #bear,
-#preans_flexbox2 #bear,
-#preans_flexbox3 #bear
-{
-    align-items: flex-end;
-}
+
 
 
 #preans_flexbox1,
@@ -338,12 +359,98 @@ ul{
     display: none;
 }
 
-.bgflexbox{
-    background: url(./pic/river.png) no-repeat center center fixed;
+#preans_flexbox1 #bear,
+#preans_flexbox2 #bear,
+#preans_flexbox3 #bear,
+#preans_flexbox3 #bear
+
+{
+    align-items: flex-end;
 }
 
+#intro_grid1,
+#intro_grid2,
+#intro_grid3,
+#intro_grid4,
+#intro_grid5,
+#intro_grid6,
+#intro_grid7,
+#intro_grid8,
+#intro_grid9,
+#intro_grid10,
+#intro_grid11,
+#intro_grid12,
+#intro_grid13,
+#intro_grid14{
+    display: none;
+    
+}
+
+#area_grid1,
+#area_grid2,
+#area_grid3,
+#area_grid4,
+#area_grid5,
+#area_grid6,
+#area_grid7,
+#area_grid8,
+#area_grid9,
+#area_grid10,
+#area_grid11,
+#area_grid12,
+#area_grid13,
+#area_grid14{
+    display: none;
+}
+
+#pre_grid1,
+#pre_grid2,
+#pre_grid3,
+#pre_grid4,
+#pre_grid5,
+#pre_grid6,
+#pre_grid7,
+#pre_grid8,
+#pre_grid9,
+#pre_grid10,
+#pre_grid11,
+#pre_grid12,
+#pre_grid13,
+#pre_grid14{
+    display: none;
+}
+
+
+#preans_grid1,
+#preans_grid2,
+#preans_grid3,
+#preans_grid4,
+#preans_grid5,
+#preans_grid6,
+#preans_grid7,
+#preans_grid8,
+#preans_grid9,
+#preans_grid10,
+#preans_grid11,
+#preans_grid12,
+#preans_grid13,
+#preans_grid14,
+#preans_grid15{
+    display: none;
+}
+
+#preans_grid1 #bear,
+#preans_grid2 #bear,
+#preans_grid3 #bear,
+#preans_grid3 #bear
+
+{
+    align-items: flex-end;
+}
 
 .flexbox li,
 .grid li {
     font-size: 14px;
 }
+
+

@@ -61,7 +61,7 @@ const ref = firebase.database().ref("userList");
 function getList(user) {
     if (user) {
         ref.child(user.uid).on('value', (snapshot) => {
-            readList(snapshot)
+            // readList(snapshot)
         })
     }
 }
@@ -90,7 +90,7 @@ function setupUI(user) {
 }
 
 
-const gotomode = document.querySelectorAll('#btn-playgame');
+const gotomode = document.querySelector('#btn-playgame');
 
 gotomode.addEventListener("click", (event) => {
         setupUI();

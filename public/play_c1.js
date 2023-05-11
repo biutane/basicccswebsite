@@ -42,12 +42,15 @@ roomsRef.child(codeRoom).on("value", (snapshot) => {
 
 let txtcss;
 function setupUI(roomInfo){
-    document.querySelector('#pre_'+ allmode + num).style["display"] = 'block';
-    document.querySelector('#area_'+ allmode + num).style["display"] = 'block';
     document.querySelector('.preview_' + allmode).style["display"] = 'block';
+    document.querySelector('#area_'+ allmode + num).style["display"] = 'block';
+    document.querySelector('#pre_'+ allmode + num).style["display"] = 'block';   
     // console.log('#intro_'+ allmode + num)
     document.querySelector('#intro_'+ allmode + num).style["display"] = 'block';
     // console.log('#intro_'+ allmode + num)
+    document.querySelector('#btnsub').style["display"] = 'block';
+    document.querySelector('#btnnext').style["display"] = 'block';
+
    
     
     txtcss = document.querySelector('#txt_' + roomInfo.category + num);
@@ -60,6 +63,7 @@ function setupUI(roomInfo){
 }
 
 console.log(dataf[urlParams.get("allmode")]);
+
 
 // let questionNumber = 1;
 // const showintro = document.querySelector(".intro");
@@ -171,8 +175,8 @@ function showQuestion(){
     // clearans.value = '';
     console.log('#area_'+ allmode + (num-1) + ', textarea')
     // console.log(clearans)
-    document.querySelector('#btnsub').style["display"] = 'none';
-    document.querySelector('#btnnext').style["display"] = 'none';
+    document.getElementById('btnsub').style["display"] = 'block';
+    document.getElementById('btnnext').style["opacity"] = '0.5';
     // console.log(document.querySelector('#btnnext').style["opacity"])
     document.querySelector('#intro_'+ allmode + (num-1)).style["display"] = 'none';
     document.querySelector('#area_'+ allmode + (num-1)).style["display"] = 'none';
@@ -194,6 +198,7 @@ function showQuestion(){
     document.querySelector('#area_'+ allmode + (num)).style["display"] = 'block';
     document.querySelector('#txt_'+ allmode +  (num)).style["display"] = 'block';
     document.querySelector('#pre_'+ allmode + (num)).style["display"] = 'block';
+   
 
     // showintro.innerHTML = dataf[urlParams.get("allmode")][questionNumber+1]
     // showcode.innerHTML = dataf[urlParams.get("allmode")][questionNumber+1]
@@ -286,10 +291,13 @@ function checkans(){
         
         if (allans.length == countCorrect && userAnsLength == allans.length) {
         // if(c.toLowerCase().replace(/\s/g,'') == v.toLowerCase().replace(/\s/g,'')){
-            document.querySelector('#pre_'+ allmode + num).style["display"] = 'none';
-            document.querySelector('#preans_'+ allmode + num).style["display"] = 'block';
-            document.querySelector('#btnnext').style["display"] = 'block';
             alert("ยินดีด้วย คุณช่วยเจ้าหมีได้สำเร็จ")
+            document.getElementById('pre_'+ allmode + num).style["display"] = 'none';
+            document.getElementById('preans_'+ allmode + num).style["display"] = 'block';
+            document.getElementById('btnnext').style["opacity"] = '1';
+
+           
+           
             // btnNext.disabled = false;
             
             

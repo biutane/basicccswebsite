@@ -20,7 +20,7 @@
       "18" : ["align-content:space-around"],
       "19" : ["align-content:flex-start"],
       "20" : ["flex-direction:row-reverse", "flex-wrap:wrap-reverse", "align-content:space-between", "justify-content:center"],
-      "max-question": "20"
+      "max-question": "19"
       
     },
     "grid" : {

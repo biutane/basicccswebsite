@@ -2,6 +2,7 @@ const categoryModes = document.querySelectorAll(".category-mode")
 const header = document.querySelector(".head h1");
 
 const roomsRef = firebase.database().ref("rooms");
+console.log(roomsRef)
 
 let selectCategory = "";
 

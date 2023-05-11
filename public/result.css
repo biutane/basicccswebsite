@@ -4,9 +4,10 @@
 body{
     background-image: url("pic/bg.png");
     font-family: 'Kanit', sans-serif;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100%;
-    margin: 0;
+    overflow: hidden;  
+    margin: 0;     
 }
 .content{
     display: flex;

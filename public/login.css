@@ -4,13 +4,16 @@
 body{
     background-image: url("pic/bg.png");
     font-family: 'Kanit', sans-serif;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100%;
+    overflow: hidden;   
+    margin: 0;    
 }
+
 header{
     background-color: #343A40;
     position: fixed;
-    width: 100%
+    width: 100%;
     /* padding: 10px 0 10px 0; */
 }
 .logohead{
@@ -49,18 +52,22 @@ header{
     border-radius: 12px;
 }
 .loginbtn{
-    margin: 1vw;
+    margin: 2vw;
     background-color: #fff;
     border: none;
-    color: white;
-    padding: 0.5rem 1.5rem;
+    color: gray;
+    padding: 0rem 1.5rem;
     text-align: center;
     text-decoration: none;
     font-size: 15pt;
     cursor: pointer;
     border-radius: 12px;
     border-color: #e7e7e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .modal-content{
     border: #8A69D4 solid 5px;
     border-radius: 15px;

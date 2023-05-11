@@ -16,7 +16,8 @@ body{
     font-family: 'Kanit', sans-serif;
     background-repeat: repeat;
     background-size: 100%;
-    overflow: hidden;    
+    overflow: hidden;  
+    margin: 0;     
 }
 
 .container {

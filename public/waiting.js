@@ -1,6 +1,7 @@
 const queryString = window.location.search;
 const querySearch = new URLSearchParams(queryString);
 const codeRoom = querySearch.get("code");
+
 let category;
 
 const codeRoomEl = document.querySelector("#codeRoom");
@@ -8,6 +9,7 @@ codeRoomEl.innerHTML = codeRoom;
 
 const roomsRef = firebase.database().ref("rooms");
 const matchingRef = firebase.database().ref("matching");
+const userRef = firebase.database().ref("users")
 
 let playerNumber;
 let matching = false;
@@ -30,12 +32,23 @@ const btnStart = document.querySelector("#btn-startgame");
 
 function setRoomInfo(roomInfo){
     const currentUser = firebase.auth().currentUser;
-    
+    console.log("เข้ามาแล้ว!");
+    console.log(roomInfo);
     if (roomInfo.uid1 == currentUser.uid) {
         playerNumber = "uid1";
-    } else if (roomInfo.uid2 == currentUser.uid) {
+        console.log(playerNumber);
+    }
+     else if (roomInfo.uid2 == currentUser.uid) {
         playerNumber = "uid2";
     }
+    // else if (roomInfo.uid1 == currentUser.uid || roomInfo.uid2 == currentUser.uid) {
+    //     console.log(playerNumber);
+    //     roomsRef.child(roomInfo.uid1).on("value", user => {
+    //         user = user.val()
+    //         document.querySelector('#pic-profile img').src = user.photoURL
+    //         document.querySelector('#nickname div').innerHTML = user.displayName
+    //     })
+    // }
 
     categoryEl.innerHTML = roomInfo.category;
     category = roomInfo.category;
@@ -47,6 +60,26 @@ function setRoomInfo(roomInfo){
     // }
 }
 
+// roomsRef.on("value", (snapshot)=>{
+//     snapshot = snapshot.val()
+//     const currentuser = firebase.auth().currentUser
+//     for(const r in snapshot){
+//         const roomInfo = snapshot[r]
+//         console.log(roomInfo);
+//         console.log(userRef);
+//         if (roomInfo.uid1 == currentUser.uid || roomInfo.uid2 == currentUser.uid) {
+//             // roomInfo = room
+//             roomsRef.child(roomInfo.uid1).on("value", user => {
+//             user = user.val()
+//             document.querySelector('#pic-profile img').src = user.photoURL
+//             document.querySelector('#nickname div').innerHTML = user.displayName
+//         })
+    
+//         }
+//     }
+// })
+
+        
 btnStart.addEventListener("click", () => {
     roomsRef.child(codeRoom).once("value", (snapshot) => {
         const room = snapshot.val();

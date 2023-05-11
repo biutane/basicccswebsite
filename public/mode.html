@@ -11,7 +11,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 </head>
 <body>
-        <nav>
+        <!-- <nav>
             <div class="profile">
                 <div class="user">
                     <div class=" logged-in">
@@ -20,26 +20,45 @@
                     </div>
                 </div>
             </div>
-         </nav>
-    <div class="menumode">
+         </nav> -->
+         <nav>
+            <div class="back">
+                <button class="btnback" id="backmyeu">
+                    <a href="index.html"><img src="pic/back_icon.png" height="50px"></a>
+                </button>
+            </div>
+            
+        </nav>
+    <div class="contenthead">
         <div class="head">
-            <h1>choose mode</h1>
+            <img src="./pic/choosee.png" width="450px">
         </div>
-        <div class="back">
+    </div>
+    <div class="content">
+        
+        <!-- <div class="back">
             <button class="btnback" id="backto">
                 <a href="index.html"><img src="pic/back_icon.png" height="50px"></a>
             </button>
-        </div>
+        </div> -->
         <!-- <a href="menu.html"><button id="backmenu">back to menu</button></a> -->
         <div class="mode">
-            <p id="choose1">Selectors</p>
-            <p id="choose2">Position</p>
-            <p id="choose3">flexbox</p>
-            <p id="choose4">Grid</p>
-            <img src="./pic/selector.png" class="allmode category-mode" id="mselectors" width="250px" alt="selectors">
-            <img src="./pic/position.png"  class="allmode category-mode" id="mposition" width="250px" alt="position">
-            <img src="./pic/flex.png"  class="allmode category-mode" id="mflexbox" width="250px" alt="flexbox">
-            <img src="./pic/grid.png"  class="allmode category-mode" id="mgrid" width="250px" alt="grid">
+            <div class="col-lg-3 col-sm-12 col-md-6">
+                    <img src="./pic/selector.png" class="allmode category-mode" id="mselectors" width="250px" alt="selectors">
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6">
+                    <img src="./pic/grid.PNG"  class="allmode category-mode" id="mgrid" width="250px" alt="grid">
+            </div>            
+            <div class="col-lg-3 col-sm-12 col-md-6">
+                    <img src="./pic/flexbox.PNG"  class="allmode category-mode" id="mflexbox" width="250px" alt="flexbox">
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6">
+                    <img src="./pic/color.PNG"  class="allmode category-mode" id="mposition" width="250px" alt="position">
+            </div>
+            <!-- <img src="./pic/selector.png" class="allmode category-mode" id="mselectors" width="250px" alt="selectors">
+            <img src="./pic/grid.PNG"  class="allmode category-mode" id="mgrid" width="250px" alt="grid">
+            <img src="./pic/flexbox.PNG"  class="allmode category-mode" id="mflexbox" width="250px" alt="flexbox">
+            <img src="./pic/color.PNG"  class="allmode category-mode" id="mposition" width="250px" alt="position"> -->
         </div>
         <!-- <div style="text-align: center; margin: 2rem;">
             <button id="btnQuickJoin">Quick Join</button>

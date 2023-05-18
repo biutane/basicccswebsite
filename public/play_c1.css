@@ -1,4 +1,4 @@
-
+ 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
@@ -28,7 +28,7 @@ body{
     align-items: center;
 }
 
-.code, .preview_flexbox,
+.code, 
 .preview_grid{
     width: 50%;
     height: 100%;
@@ -50,16 +50,18 @@ body{
 }
 
 
-.csstxt #txt_flexbox8,
-.csstxt #txt_flexbox9,
-.csstxt #txt_flexbox13,
-.csstxt #txt_flexbox14,
-.csstxt #txt_flexbox15,
-.csstxt #txt_flexbox17{
+#txt_flexbox8,
+#txt_flexbox9,
+#txt_flexbox13,
+#txt_flexbox14,
+#txt_flexbox15,
+#txt_flexbox17{
     height: 50px;
 }
 
-.csstxt #txt_flexbox17{
+
+#txt_flexbox17
+#txt_flexbox20{
     height: 100px;
 }
 
@@ -148,8 +150,9 @@ label{
  {
     position: sticky;
     background-size: cover;
+    background-repeat: no-repeat;
     top: 0;
-    width: 50%;
+    width: 90%;
     height: 90%;
     overflow: hidden;
     display: block;
@@ -177,7 +180,7 @@ label{
     background-color: #D9D9D9;
     border-radius: 4px;
     overflow: hidden;
-    bottom: -25px;
+    bottom: -44px;
 }
 
 .bear1{
@@ -231,7 +234,7 @@ label{
 }
 
 #cat1 , #cat2, #cat3{
-    width: 30%;
+    width: 120px;
     position: relative;
     overflow: hidden;
 }
@@ -248,10 +251,9 @@ label{
 
 }
 
-#pink , #orange{
-    width: 35%;
+#pink , #orange, #yellow{
+    width: 160px;
     position: relative;
-    overflow: hidden;
 
 }
 
@@ -268,8 +270,6 @@ label{
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 0.5em;
-    align-items: flex-end;
 }
 
 #id{
@@ -310,7 +310,7 @@ label{
 }
 
 .intro{
-    margin-top: 20px;
+    margin-top: 25px;
     width: 100%;
     height: 40vh;
     background-color: #1B1D2D;
@@ -438,14 +438,6 @@ ul{
     display: none;
 }
 
-#preans_flexbox1 .cat,
-#preans_flexbox2 #bear,
-#preans_flexbox3 #bear,
-#preans_flexbox3 #bear
-
-{
-    align-items: flex-end;
-}
 
 
 #intro_grid1,
@@ -532,6 +524,283 @@ ul{
 .grid li {
     font-size: 14px;
 }
+
+
+
+#intro_flexbox7,
+#area_flexbox7,
+/* #pre_flexbox7 */
+#preans_flexbox7
+{
+display: block;
+}
+
+
+#pre_flexbox2 #cat2{
+    margin-left: 22px;
+}
+
+#pre_flexbox2 .raft{
+    align-items: center;
+}
+
+#pre_flexbox2 #orange{
+    margin-left: -15px;
+}
+
+
+#preans_flexbox2 #cat2{
+    margin-left: 22px;
+}
+
+#preans_flexbox2 .raft{
+    align-items: center;
+}
+
+#preans_flexbox2 #orange{
+    margin-left: -15px;
+}
+
+#preans_flexbox2 .cat{
+    align-items: center;
+}
+
+#pre_flexbox3 #pink{
+    justify-content: flex-end;
+}
+
+#pre_flexbox8 .raft{
+    align-items: center;
+    justify-content: center;
+}
+
+#preans_flexbox8 .raft,#preans_flexbox8 .cat{
+    align-items: center;
+    justify-content: center;
+}
+
+
+#pre_flexbox3 .raft{
+    justify-content: flex-end;
+}
+
+#preans_flexbox3 .raft, #preans_flexbox3 .cat{
+    justify-content: flex-end;
+}
+
+
+#pre_flexbox4 .raft{
+    justify-content: center;
+}
+
+#pre_flexbox4 #cat1,#preans_flexbox4 #cat1{
+    margin-left: -10px;
+}
+
+#pre_flexbox4 #cat2, #preans_flexbox4 #cat2{
+    margin-left: 10px;
+}
+
+#preans_flexbox4 .raft, #preans_flexbox4 .cat{
+    justify-content: center;
+}
+
+#pre_flexbox4 #orange, #preans_flexbox4 #orange{
+    margin-left: -30px;
+}
+
+
+#pre_flexbox5 #pink,
+#pre_flexbox5 #orange,
+#pre_flexbox5 #yellow,
+#preans_flexbox5 #pink,
+#preans_flexbox5 #orange,
+#preans_flexbox5 #yellow,
+#pre_flexbox6 #pink,
+#pre_flexbox6 #orange,
+#pre_flexbox6 #yellow,
+#preans_flexbox6 #pink,
+#preans_flexbox6 #orange,
+#preans_flexbox6 #yellow,
+#pre_flexbox7 #pink,
+#pre_flexbox7 #orange,
+#pre_flexbox7 #yellow,
+#preans_flexbox7 #pink,
+#preans_flexbox7 #orange,
+#preans_flexbox7 #yellow,
+#pre_flexbox9 #pink,
+#pre_flexbox9 #orange,
+#pre_flexbox9 #yellow,
+#preans_flexbox9 #pink,
+#preans_flexbox9 #orange,
+#preans_flexbox9 #yellow,
+#pre_flexbox10 #pink,
+#pre_flexbox10 #orange,
+#pre_flexbox10 #yellow,
+#preans_flexbox10 #pink,
+#preans_flexbox10 #orange,
+#preans_flexbox10 #yellow,
+#pre_flexbox11 #pink,
+#pre_flexbox11 #orange,
+#pre_flexbox11 #yellow,
+#preans_flexbox11 #pink,
+#preans_flexbox11 #orange,
+#preans_flexbox11 #yellow,
+#pre_flexbox12 #pink,
+#pre_flexbox12 #orange,
+#pre_flexbox12 #yellow,
+#preans_flexbox12 #pink,
+#preans_flexbox12 #orange,
+#preans_flexbox12 #yellow,
+#pre_flexbox13 #pink,
+#pre_flexbox13 #orange,
+#pre_flexbox13 #yellow,
+#preans_flexbox13 #pink,
+#preans_flexbox13 #orange,
+#preans_flexbox13 #yellow,
+#pre_flexbox14 #pink,
+#pre_flexbox14 #orange,
+#pre_flexbox14 #yellow,
+#preans_flexbox14 #pink,
+#preans_flexbox14 #orange,
+#preans_flexbox14 #yellow,
+#pre_flexbox15 #pink,
+#pre_flexbox15 #orange,
+#pre_flexbox15 #yellow,
+#preans_flexbox15 #pink,
+#preans_flexbox15 #orange,
+#preans_flexbox15 #yellow,
+#pre_flexbox16 #pink,
+#pre_flexbox16 #orange,
+#pre_flexbox16 #yellow,
+#preans_flexbox16 #pink,
+#preans_flexbox16 #orange,
+#preans_flexbox16 #yellow,
+#pre_flexbox17 #pink,
+#pre_flexbox17 #orange,
+#pre_flexbox17 #yellow,
+#preans_flexbox17 #pink,
+#preans_flexbox17 #orange,
+#preans_flexbox17 #yellow,
+#pre_flexbox18 #pink,
+#pre_flexbox18 #orange,
+#pre_flexbox18 #yellow,
+#preans_flexbox18 #pink,
+#preans_flexbox18 #orange,
+#preans_flexbox18 #yellow,
+#pre_flexbox19 #pink,
+#pre_flexbox19 #orange,
+#pre_flexbox19 #yellow,
+#preans_flexbox19 #pink,
+#preans_flexbox19 #orange,
+#preans_flexbox19 #yellow,
+#pre_flexbox20 #pink,
+#pre_flexbox20 #orange,
+#pre_flexbox20 #yellow,
+#preans_flexbox20 #pink,
+#preans_flexbox20 #orange,
+#preans_flexbox20 #yellow{
+    width: 135px;
+    margin-top: 10px;
+    position: relative;
+}
+
+#pre_flexbox5 .raft, 
+#preans_flexbox5 .raft{
+    justify-content: space-around;
+}
+
+#pre_flexbox5 #cat1, 
+#preans_flexbox5 #cat1{
+    left: -16px;
+}
+
+#pre_flexbox5 #cat2, 
+#preans_flexbox5 #cat2{
+    left: -4px;
+}
+
+#pre_flexbox5 #cat3, 
+#preans_flexbox5 #cat3{
+    left: 6px;
+}
+
+#preans_flexbox5 .cat{
+    justify-content: space-around;
+}
+
+#pre_flexbox6 .raft, 
+#preans_flexbox6 .raft{
+    justify-content: space-between;
+}
+
+#pre_flexbox6 #cat1, 
+#preans_flexbox6 #cat1{
+    left: -16px;
+}
+
+#pre_flexbox6 #cat2, 
+#preans_flexbox6 #cat2{
+    left: -4px;
+}
+
+#pre_flexbox6 #cat3, 
+#preans_flexbox6 #cat3{
+    left: 6px;
+}
+
+#preans_flexbox6 .cat{
+    justify-content: space-between;
+}
+
+
+#pre_flexbox10 .raft,
+#preans_flexbox10 .raft{
+    justify-content: flex-end;
+}
+
+#pre_flexbox10 #pink,
+#preans_flexbox10 #pink{
+   right: -30px;
+}
+#pre_flexbox10 #orange,
+#preans_flexbox10 #orange{
+   right: -15px;
+}
+
+
+#preans_flexbox10 .cat{
+    flex-direction: row-reverse;
+}
+
+#pre_flexbox9 .cat{
+    align-items: flex-end;
+}
+
+#pre_flexbox9 .raft,
+#preans_flexbox9 .raft{
+   justify-content: space-between;
+}
+
+
+#preans_flexbox9 .cat{
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#preans_flexbox9 #cat1{
+    left: -17px;
+}
+#preans_flexbox9 #cat2{
+    left: -9px;
+}
+
+
+
+
+
+
+
 
 
 

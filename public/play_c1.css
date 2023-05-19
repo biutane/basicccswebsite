@@ -170,8 +170,6 @@ label{
     display: none;
 }
 
-
-
 #csscode{
     height: 320px;
     width: 100%;
@@ -183,45 +181,6 @@ label{
     bottom: -44px;
 }
 
-.bear1{
-    position: relative;
-    width: 20%;
-    overflow: hidden;
-}
-
-
-
-
-.bed1 {
-    width: 30%;
-    position: relative;
-    overflow: hidden;
-}
-
-#bed {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding: 1em;
-    align-items: flex-end;
-}
-
-
-
-/* 
-#bear{
-    display: flex;
-    position: absolute;
-    z-index: 20;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 1em;
-   
-} */
-
 .cat{
     display: flex;
     position: absolute;
@@ -230,37 +189,18 @@ label{
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 1em;
+    margin-top: 17px;
 }
 
 #cat1 , #cat2, #cat3{
     width: 120px;
     position: relative;
-    overflow: hidden;
 }
 
-#pre_flexbox2 .cat{
-    display: flex;
-    position: absolute;
-    z-index: 20;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 1em;
-
-}
 
 #pink , #orange, #yellow{
-    width: 160px;
     position: relative;
-
-}
-
-#area_flexbox2,
-#pre_flexbox2,
-#preans_flexbox2{
-    display: block;
+    width: 136px;
 }
 
 .raft {
@@ -270,6 +210,7 @@ label{
     left: 0;
     width: 100%;
     height: 100%;
+    margin-top: 10px;
 }
 
 #id{
@@ -288,7 +229,6 @@ label{
     color: #646464;
     font-family: 'Source Code Pro', monospace;
 }
-
 
 .line-num{
     display: block;
@@ -438,8 +378,6 @@ ul{
     display: none;
 }
 
-
-
 #intro_grid1,
 #intro_grid2,
 #intro_grid3,
@@ -511,14 +449,6 @@ ul{
     display: none;
 }
 
-#preans_grid1 #bear,
-#preans_grid2 #bear,
-#preans_grid3 #bear,
-#preans_grid3 #bear
-
-{
-    align-items: flex-end;
-}
 
 .flexbox li,
 .grid li {
@@ -527,13 +457,11 @@ ul{
 
 
 
-#intro_flexbox7,
-#area_flexbox7,
-/* #pre_flexbox7 */
-#preans_flexbox7
-{
-display: block;
-}
+/* #intro_flexbox1,
+#area_flexbox1,
+#pre_flexbox1 */
+/* #preans_flexbox1 */
+
 
 
 #pre_flexbox2 #cat2{
@@ -609,101 +537,6 @@ display: block;
     margin-left: -30px;
 }
 
-
-#pre_flexbox5 #pink,
-#pre_flexbox5 #orange,
-#pre_flexbox5 #yellow,
-#preans_flexbox5 #pink,
-#preans_flexbox5 #orange,
-#preans_flexbox5 #yellow,
-#pre_flexbox6 #pink,
-#pre_flexbox6 #orange,
-#pre_flexbox6 #yellow,
-#preans_flexbox6 #pink,
-#preans_flexbox6 #orange,
-#preans_flexbox6 #yellow,
-#pre_flexbox7 #pink,
-#pre_flexbox7 #orange,
-#pre_flexbox7 #yellow,
-#preans_flexbox7 #pink,
-#preans_flexbox7 #orange,
-#preans_flexbox7 #yellow,
-#pre_flexbox9 #pink,
-#pre_flexbox9 #orange,
-#pre_flexbox9 #yellow,
-#preans_flexbox9 #pink,
-#preans_flexbox9 #orange,
-#preans_flexbox9 #yellow,
-#pre_flexbox10 #pink,
-#pre_flexbox10 #orange,
-#pre_flexbox10 #yellow,
-#preans_flexbox10 #pink,
-#preans_flexbox10 #orange,
-#preans_flexbox10 #yellow,
-#pre_flexbox11 #pink,
-#pre_flexbox11 #orange,
-#pre_flexbox11 #yellow,
-#preans_flexbox11 #pink,
-#preans_flexbox11 #orange,
-#preans_flexbox11 #yellow,
-#pre_flexbox12 #pink,
-#pre_flexbox12 #orange,
-#pre_flexbox12 #yellow,
-#preans_flexbox12 #pink,
-#preans_flexbox12 #orange,
-#preans_flexbox12 #yellow,
-#pre_flexbox13 #pink,
-#pre_flexbox13 #orange,
-#pre_flexbox13 #yellow,
-#preans_flexbox13 #pink,
-#preans_flexbox13 #orange,
-#preans_flexbox13 #yellow,
-#pre_flexbox14 #pink,
-#pre_flexbox14 #orange,
-#pre_flexbox14 #yellow,
-#preans_flexbox14 #pink,
-#preans_flexbox14 #orange,
-#preans_flexbox14 #yellow,
-#pre_flexbox15 #pink,
-#pre_flexbox15 #orange,
-#pre_flexbox15 #yellow,
-#preans_flexbox15 #pink,
-#preans_flexbox15 #orange,
-#preans_flexbox15 #yellow,
-#pre_flexbox16 #pink,
-#pre_flexbox16 #orange,
-#pre_flexbox16 #yellow,
-#preans_flexbox16 #pink,
-#preans_flexbox16 #orange,
-#preans_flexbox16 #yellow,
-#pre_flexbox17 #pink,
-#pre_flexbox17 #orange,
-#pre_flexbox17 #yellow,
-#preans_flexbox17 #pink,
-#preans_flexbox17 #orange,
-#preans_flexbox17 #yellow,
-#pre_flexbox18 #pink,
-#pre_flexbox18 #orange,
-#pre_flexbox18 #yellow,
-#preans_flexbox18 #pink,
-#preans_flexbox18 #orange,
-#preans_flexbox18 #yellow,
-#pre_flexbox19 #pink,
-#pre_flexbox19 #orange,
-#pre_flexbox19 #yellow,
-#preans_flexbox19 #pink,
-#preans_flexbox19 #orange,
-#preans_flexbox19 #yellow,
-#pre_flexbox20 #pink,
-#pre_flexbox20 #orange,
-#pre_flexbox20 #yellow,
-#preans_flexbox20 #pink,
-#preans_flexbox20 #orange,
-#preans_flexbox20 #yellow{
-    width: 135px;
-    margin-top: 10px;
-    position: relative;
-}
 
 #pre_flexbox5 .raft, 
 #preans_flexbox5 .raft{

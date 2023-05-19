@@ -104,7 +104,6 @@ function startGame(){
 
 let timerInterval;
 function Matching(){
-    // if (selectCategory == "") return;
     matching = true;
     btnStart.innerHTML = "Cancel";
     timerEl.style.display = "block";

@@ -44,7 +44,7 @@ let txtcss;
 function setupUI(roomInfo){
     document.querySelector('.preview_' + allmode).style["display"] = 'block';
     document.querySelector('#area_'+ allmode + num).style["display"] = 'block';
-    document.querySelector('#pre_'+ allmode + num).style["display"] = 'block';   
+    document.querySelector('#pre_'+ allmode + num).style["display"] = 'none';   
     // console.log('#intro_'+ allmode + num)
     document.querySelector('#intro_'+ allmode + num).style["display"] = 'block';
     // console.log('#intro_'+ allmode + num)
@@ -221,7 +221,6 @@ function checkans(){
     const mode = allmode;
     const checktxt = txtcss;
     console.log(checktxt);
-    // console.log(checkans)
     fetch('./test.json')
     .then(response => response.json())
     .then(data => {
@@ -236,37 +235,22 @@ function checkans(){
         let c = "";
         let v = "";
         
-        // let qnum = "intro_flex";
-        // let area = "area_flex";
-        // let preans1 = "pre_flex";
-        // let preans2 = "preans_flex";
+
         let fspace = /\s/g;
         for(let i = 0; i<(allans).length;i++){
             c += allans[i];
             console.log(c)
-            // console.log(allans[i])
+   
         }
         for(let i = 0; i<checktxt.value.length;i++){
             v += checktxt.value[i];
             console.log(v)
-            // p += i
-            // console.log(p)
-            // console.log(v)
+
         }
-        // for(let i = 0; i<16;i++){
-        //     let txti =  i.toString();
-        //     qnum += txti;
-        //     area += txti;
-        //     preans1 += txti;
-        //     preans2 += txti;
-        // }
-            
-        // btnNext.disabled = true;
-        // console.log('#txt_' + allmode + num)
+
         const ansInput = document.querySelector(`#txt_${allmode}${num}`)
         const ansUserList = ansInput.value.replace("\n", "").split(";")
         console.log(ansUserList)
-        // console.log(txtcss.value)
         console.log(allans);
 
         let allAnsCheckArray = [...allans]
@@ -288,19 +272,12 @@ function checkans(){
         }
         console.log(userAnsLength);
 
-        
         if (allans.length == countCorrect && userAnsLength == allans.length) {
-        // if(c.toLowerCase().replace(/\s/g,'') == v.toLowerCase().replace(/\s/g,'')){
-            alert("ยินดีด้วย คุณช่วยเจ้าหมีได้สำเร็จ")
+  
+            alert("ยินดีด้วย คุณตอบถูก!")
             document.getElementById('pre_'+ allmode + num).style["display"] = 'none';
             document.getElementById('preans_'+ allmode + num).style["display"] = 'block';
             document.getElementById('btnnext').style["opacity"] = '1';
-
-           
-           
-            // btnNext.disabled = false;
-            
-            
 
             roomsRef.child(codeRoom).once("value", (snapshot) => {
                 const roomInfo = snapshot.val();
@@ -324,29 +301,17 @@ function checkans(){
                 }
             })
 
-            // num += 1;
             console.log(num) 
-            document.querySelector('#btnsub').style["display"] = 'none';
-            // txtcss.value = '';
-            
-            
+            document.querySelector('#btnsub').style["display"] = 'none';      
         }
         else if(!checktxt.value){
-            // btnNext.disabled = true;
-            // btnans.disabled = true;
-     
-            alert("No")
+            alert("คุณยังไม่ได้กรอกคำตอบ")
         }
         else{
-            // btnNext.disabled = true;
-            // btnans.disabled = true;
-            // btnNext.disabled = true;
-            alert("wrong")
+            alert("ลองใหม่อีกครั้งนะ!")
         } 
-        
+
     })
-    // document.querySelector('#txt_' + allmode + num).value ='';
-    // console.log(txtcss.value)
 }
 
 

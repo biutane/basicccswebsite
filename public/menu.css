@@ -21,7 +21,7 @@ body{
     overflow: hidden;
 }
 .info{
-    width: 75%;
+    width: 60%;
     flex-grow: 3;
     display: flex;
     /* width: 100%; */
@@ -34,15 +34,37 @@ body{
     margin-top: 70px;
 }
 .leaderboard{
-    width: 25%;
+    height: 87%;
+    width: 40%;
     flex-grow: 1;
 }
+
+.rank{
+    background-color: #8852AA;
+    height: 100%;
+    border-radius: 40px 40px 0 0;
+    margin-top: 2vw;
+    opacity: 1;
+}
+
+.leaderboard p{
+    color: #fff!important;
+    font-size: 50px!important;
+    top: -10%!important;
+}
+
 .content p{
     color: #E7BD4F;
     text-shadow: 1px 1px black;
     font-size: 20pt;
 }
 
+
+#drank{
+    font-size: 30px!important; 
+    color: white;
+    padding: 0px 30px;
+}
 
 .user{
     display: flex;
@@ -82,12 +104,7 @@ body{
     border-radius: 20px;
 }
 
-.rank{
-    background-color: #1E2124;
-    height: 100%;
-    border-radius: 40px 40px 0 0;
-    margin-top: 2vw;
-}
+
 
 input[type=text]{
     width: 20%;

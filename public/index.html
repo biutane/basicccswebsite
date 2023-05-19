@@ -22,8 +22,9 @@
           <div class="d-inline-block me-2" id="profile-image"></div>
           <div class="d-inline-block me-2" id="profile-name"></div>
         </div> -->
-        
+        <button type="button" id="btnhowtoplay" class="logged-in" onclick="toggle();">How To Play?</button>
         <button type="button" id="btnLogout" class="logged-in">Logout</button>
+        
       </nav>
     </div>
   </header>
@@ -56,12 +57,40 @@
             <button class="btnjoinwith">Join</button>
         </div>
     </div>
-    <div class="leaderboard">
-      <div class="rank"><p id="head" style="font-size: 50px;">How to play</p>
-        <img src="https://media.discordapp.net/attachments/1089579453245554698/1106190873303191622/image.png?width=830&height=472" width="80%">
-        <p id="drank">ให้ทำการกรอกคำตอบที่ถูกต้องในบรรทัดที่เว้นว่างไว้ กดปุ่ม submit เพื่อยืนยันคำตอบ เมื่อตอบคำตอบได้ถูกต้องจะสามารถกดปุ่ม Next 
-          เพื่อไปสู่ข้อถัดไป </p>
-      </div>
+    <div id="howtoplay">
+      <div class="howtoinfo">
+        <div class="headhow">
+          How To Play?
+        </div>
+        <div class="howto1">
+          <img src="https://media.discordapp.net/attachments/1089579453245554698/1106190873303191622/image.png?width=830&amp;height=472" width="80%">
+          <br><br>กดปุ่ม playgame เพื่อเลือกหมวดหมู่ที่ต้องการเล่น หรือ ใส่โค้ดห้อง
+        </div>
+        <div class="howto2">
+          <img src="https://media.discordapp.net/attachments/1089579453245554698/1106190873303191622/image.png?width=830&amp;height=472" width="80%">
+          <br><br>เชิญเพื่อน ๆ ของคุณมาแข่งขันกัน หรือ สุ่มคู่ต่อสู้ได้เลย
+        </div>
+        <div class="howto3">
+          <img src="https://media.discordapp.net/attachments/1089579453245554698/1106190873303191622/image.png?width=830&amp;height=472" width="80%">
+          <br><br>พิมพ์คำสั่งโค้ดที่ถูกต้องลงในช่องว่าง 
+        </div>
+        <div class="howto4">
+          <img src="https://media.discordapp.net/attachments/1089579453245554698/1106190873303191622/image.png?width=830&amp;height=472" width="80%">
+          <br><br>กดปุ่ม submit เพื่อยืนยันคำตอบ เมื่อตอบถูกต้องจะสามารถกดปุ่ม Next เพื่อไปสู่ข้อถัดไป
+        </div>
+        <div class="howto5">
+          <img src="https://media.discordapp.net/attachments/1089579453245554698/1106190873303191622/image.png?width=830&amp;height=472" width="80%">
+          <br><br>ดูผลลัพธ์ของการแข่งขัน ผู้ที่ไปถึง level สุดท้ายได้ก่อนจะเป็นผู้ชนะ!!
+        </div>
+        <div id="pagination">
+            <a href="#" class="blocks" id="page1" onclick="pageone()">1</a>
+            <a href="#" class="blocks" id="page2" onclick="pagetwo()">2</a>
+            <a href="#" class="blocks" id="page3" onclick="pagethree()">3</a>
+            <a href="#" class="blocks" id="page4" onclick="pagefour()">4</a>
+            <a href="#" class="blocks" id="page5" onclick="pagefive()">5</a>
+        </div>
+      </div>        
+
     </div>
   </div>
   <!-- <script>

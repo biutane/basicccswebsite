@@ -21,7 +21,7 @@ body{
     overflow: hidden;
 }
 .info{
-    width: 60%;
+    width: 75%;
     flex-grow: 3;
     display: flex;
     /* width: 100%; */
@@ -33,38 +33,16 @@ body{
     overflow: hidden;
     margin-top: 70px;
 }
-.leaderboard{
-    height: 87%;
-    width: 40%;
-    flex-grow: 1;
+#howtoplay{
+    width: 30%;
+    display: none;
 }
-
-.rank{
-    background-color: #8852AA;
-    height: 100%;
-    border-radius: 40px 40px 0 0;
-    margin-top: 2vw;
-    opacity: 1;
-}
-
-.leaderboard p{
-    color: #fff!important;
-    font-size: 50px!important;
-    top: -10%!important;
-}
-
 .content p{
     color: #E7BD4F;
     text-shadow: 1px 1px black;
     font-size: 20pt;
 }
 
-
-#drank{
-    font-size: 30px!important; 
-    color: white;
-    padding: 0px 30px;
-}
 
 .user{
     display: flex;
@@ -104,7 +82,19 @@ body{
     border-radius: 20px;
 }
 
-
+.howtoinfo{
+    background-color: #1E2124;
+    height: 100%;
+    border-radius: 40px 40px 0 0;
+    margin-top: 2vw;
+    /* transition: all 2s ease-in; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-bottom: 100px; */
+    flex-direction: column;
+    padding-top: 150px;
+}
 
 input[type=text]{
     width: 20%;
@@ -134,10 +124,10 @@ nav {
     width: 100%;
     height: 10%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     position: fixed;
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column; */
+    justify-content: flex-end;
   }
   .menu{
     align-items: center;
@@ -258,6 +248,28 @@ nav {
     color: #747474;
 }
 
+#btnhowtoplay{
+    background-color: #E473A0;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15pt;
+    font-family: 'Kanit', sans-serif;
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#btnhowtoplay:hover{
+    background-color: #DE4B92;
+}
+#btnhowtoplayph:hover{
+    color: #747474;
+}
+
 .username p{
     font-size: 15pt;
     margin: 10;
@@ -285,4 +297,71 @@ nav {
     .btnlogout{
         display: none;
     }
+}
+
+#pagination{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+  }
+.blocks{
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    /* border: 1px solid #DDDDDD; */
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #DE4B92;
+    border-radius: 50%;
+    margin: 0 5;
+}
+.blocks:hover{
+    background-color: #515151;
+}
+
+.headhow{
+    color: #E7BD4F;
+    font-size: 28pt;
+    opacity: 0.8;
+}
+
+.howto1{
+    color: white;
+    opacity: 0.8;
+    font-size: 16pt;
+    padding: 0 30px;
+    display: block;
+}
+.howto2{
+    color: white;
+    opacity: 0.8;
+    font-size: 16pt;
+    padding: 0 30px;
+    display: none;
+}
+.howto3{
+    color: white;
+    opacity: 0.8;
+    font-size: 16pt;
+    padding: 0 30px;
+    display: none;
+}
+.howto4{
+    color: white;
+    opacity: 0.8;
+    font-size: 16pt;
+    padding: 0 30px;
+    display: none;
+}
+.howto5{
+    color: white;
+    opacity: 0.8;
+    font-size: 16pt;
+    padding: 0 30px;
+    display: none;
+}
+
+#page1{
+    background-color: #515151;
 }

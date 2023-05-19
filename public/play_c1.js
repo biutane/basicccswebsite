@@ -44,7 +44,7 @@ let txtcss;
 function setupUI(roomInfo){
     document.querySelector('.preview_' + allmode).style["display"] = 'block';
     document.querySelector('#area_'+ allmode + num).style["display"] = 'block';
-    document.querySelector('#pre_'+ allmode + num).style["display"] = 'none';   
+    document.querySelector('#pre_'+ allmode + num).style["display"] = 'block';   
     // console.log('#intro_'+ allmode + num)
     document.querySelector('#intro_'+ allmode + num).style["display"] = 'block';
     // console.log('#intro_'+ allmode + num)

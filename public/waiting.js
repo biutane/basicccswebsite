@@ -49,12 +49,16 @@ function setRoomInfo(roomInfo){
     else if (roomInfo.uid2 == currentUser.uid) {
         playerNumber = "uid2";
     }
-    if (roomInfo.uid1 == currentUser.uid || roomInfo.uid2 == currentUser.uid) {
+    if (roomInfo.uid1) {
         userRef.child(roomInfo.uid1).once("value", user => {
             user = user.val()
             document.querySelector('#pic-profile img').src = user.photoURL
             document.querySelector('#nickname1 div').innerHTML = user.displayName
         })
+    }
+    else{
+            document.querySelector('#pic-profile img').src = "./pic/invite.png"
+            document.querySelector('#nickname1 div').innerHTML = 'loading...'
     }
     if (roomInfo.uid2) {
         userRef.child(roomInfo.uid2).once("value", user => {
@@ -62,6 +66,10 @@ function setRoomInfo(roomInfo){
             document.querySelector('#invite img').src = user.photoURL
             document.querySelector('#nickname2 div').innerHTML = user.displayName
         })
+    }
+    else{
+            document.querySelector('#invite img').src = "./pic/invite.png"
+            document.querySelector('#nickname2 div').innerHTML = 'loading...'
     }
     categoryEl.innerHTML = roomInfo.category;
     category = roomInfo.category;
@@ -96,13 +104,17 @@ function startGame(){
     })
 }
 
+const btnback = document.querySelector(".back")
+const btnhome = document.querySelector(".backhome")
+
 let timerInterval;
 function Matching(){
     matching = true;
     btnStart.innerHTML = "Cancel";
     timerEl.style.display = "block";
     console.log("Matching!");
-    
+    btnback.style.display ='none'
+    btnhome.style.display ='none'
     const currentUser = firebase.auth().currentUser;
 
     matchingRef.once("value", (snapshot) => {
@@ -166,6 +178,8 @@ function CancelMatching(){
     matching = false;
     matchingRef.child(codeRoom).remove();
     btnStart.innerHTML = "Start";
+    btnback.style.display ='flex'
+    btnhome.style.display ='flex'
 }
 
 const btnBack = document.querySelector("#backto");

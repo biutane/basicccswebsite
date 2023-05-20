@@ -66,6 +66,15 @@ nav {
     padding: 0 0 0 2vw;
     /* flex: 1; */
 }
+
+.backhome{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 0 0 0 2vw;
+    /* flex: 1; */
+}
 .match{
     display: flex;
     width: 100%;
@@ -226,6 +235,10 @@ nav {
     margin: 50px 2px;
     cursor: default;
     border-radius: 20px;
+    cursor: pointer;
+}
+.btnstart:hover{
+    background-color: #FA58B6;
 }
 
 .ready{
@@ -390,9 +403,9 @@ nav {
     font-weight: bold;
 }
 
-#invite{
+/* #invite{
     cursor: pointer;
-}
+} */
 
 #btn-startgame.disabled{
     background-color: #a6bbb6;
@@ -484,4 +497,11 @@ nav {
     .closepopupcode img {
         width: 5vw;
     }
+}
+
+#pic-profile img{
+    border: #9C5CED solid 10px;
+}
+#invite img{
+    border: #9C5CED solid 10px;
 }

@@ -34,6 +34,10 @@ body{
     display: inline-block;
 }
 
+.mode img:hover {
+    transform: scale(1.2);
+}
+
 #backmenu{
     color: #fff;
     font-family: 'Kanit', sans-serif;
@@ -236,7 +240,7 @@ nav {
     display: flex;
     align-items: center;
     position: fixed;
-
+    padding: 30px;
   }
 
 
@@ -256,6 +260,7 @@ nav {
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .content p{

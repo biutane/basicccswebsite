@@ -26,7 +26,20 @@
     </nav>
     <div class="content">
         <div style="color: white;">Category : <span id="categoryRoom">[CATEGORY]</span></div>
-        <div style="color: white; font-size: 48px;">Code : <span id="codeRoom">[CODE ROOM]</span></div>
+        <div style="color: white; font-size: 48px; display: flex;">Code : 
+            <div class="parent">
+                <div class="left">
+                    <span class="textToCopy" id="codeRoom">[CODE ROOM]</span>
+                </div>
+                <div class="right">
+                    <button id="copyButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="square" stroke-linejoin="arcs"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                    </button> 
+                
+                </div>
+                <span class="copyResult"></span>
+            </div>
+        </div>
         <div style="color: white;" class="waiting"></div>
         <div class="row match">
             <div class="col-lg-4 col-sm-12 col-md-4 playerone">

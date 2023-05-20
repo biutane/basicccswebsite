@@ -31,6 +31,7 @@ nav {
     display: flex;
     align-items: center;
     position: fixed;
+    padding: 30px;
   }
 
 
@@ -63,7 +64,7 @@ nav {
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    padding: 0 0 0 2vw;
+    /* padding: 0 0 0 2vw; */
     /* flex: 1; */
 }
 
@@ -504,4 +505,68 @@ nav {
 }
 #invite img{
     border: #9C5CED solid 10px;
+}
+
+.parent{
+    display: flex;
+    position: relative;
+    font-size: 36px;
+    font-weight: bold;
+    align-items: center;
+    margin-left: 20px;
+  }
+  
+  .left{
+    border-right:none;
+    border-radius:10px;
+    border-bottom-right-radius:0;
+    border-top-right-radius:0;
+    padding: 15px 45px;
+    height: 20px;
+    align-items: center;
+    display: flex;
+    border: 1px solid #ddd;
+    color: black;
+    background-color: white;
+  }
+  
+  .right{
+    cursor:pointer;
+    border-radius:10px;
+    border-left:none;
+    border-bottom-left-radius:0;
+    border-top-left-radius:0;
+    padding: 15px 15px;
+    background-image: radial-gradient(circle 248px at center, #9C5CED 0%, #9C5CED 47%, #9C5CED 100%);
+    height: 20px;
+    align-items: center;
+    display: flex;
+    border: 1px solid #8A69D4;
+  }
+  
+  span.tlt{
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(70%);
+    background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+    padding: 3% 5%;
+    border-radius:10px;
+    white-space: nowrap;
+  }
+  span.tlt.show{
+    display: block;
+  }
+  
+  
+  h1{
+    text-align: right;
+    color:#d299c2;
+  }
+
+#copyButton{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }

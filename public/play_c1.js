@@ -44,12 +44,15 @@ let txtcss;
 function setupUI(roomInfo){
     document.querySelector('.preview_' + allmode).style["display"] = 'block';
     document.querySelector('#area_'+ allmode + num).style["display"] = 'block';
-    document.querySelector('#pre_'+ allmode + num).style["display"] = 'block';   
+    document.querySelector('#pre_'+ allmode + num).style["display"] = 'block';  
+    
     // console.log('#intro_'+ allmode + num)
     document.querySelector('#intro_'+ allmode + num).style["display"] = 'block';
     // console.log('#intro_'+ allmode + num)
     document.querySelector('#btnsub').style["display"] = 'block';
     document.querySelector('#btnnext').style["display"] = 'block';
+
+    document.querySelector('#suborder').innerHTML = num +'/'+ maxQuestion;
 
    
     
@@ -63,7 +66,6 @@ function setupUI(roomInfo){
 }
 
 console.log(dataf[urlParams.get("allmode")]);
-
 
 // let questionNumber = 1;
 // const showintro = document.querySelector(".intro");
@@ -182,6 +184,7 @@ function showQuestion(){
     document.querySelector('#area_'+ allmode + (num-1)).style["display"] = 'none';
     document.querySelector('#txt_'+ allmode + (num-1)).style["display"] = 'none';
     console.log('#area_'+ allmode + (num-1))
+    // document.querySelector('#pre_'+ allmode + (num-1)).style["display"] = 'none';
     document.querySelector('#preans_'+ allmode + (num-1)).style["display"] = 'none';
     
     
@@ -249,33 +252,35 @@ function checkans(){
         }
 
         const ansInput = document.querySelector(`#txt_${allmode}${num}`)
-        const ansUserList = ansInput.value.replace("\n", "").split(";")
+        const ansUserList = ansInput.value.trim().replace("\n", "").split(";")
         console.log(ansUserList)
+        const ansUserListFilter = ansUserList.filter((ans) => ans.trim() != "")
+        console.log(ansUserListFilter);
         console.log(allans);
-
+        
         let allAnsCheckArray = [...allans]
         let countCorrect = 0;
         ansUserList.forEach((ans) => {
             const ansTrim = ans.trim().toLowerCase();
-            if (allAnsCheckArray.includes(ansTrim)) {
+            const ansSplits = ansTrim.split(":");
+            const ansTrimNew = `${ansSplits[0]?.trim()}:${ansSplits[1]?.trim()}`
+            console.log(ansTrimNew);
+            if (allAnsCheckArray.includes(ansTrimNew)) {
                 countCorrect += 1;
                 allAnsCheckArray = allAnsCheckArray.filter((ans) => ans != ansTrim)
             }
         })
-
+        
         console.log(allans.length);
         console.log(countCorrect);
-
-        let userAnsLength = ansUserList.length;
-        if (ansUserList[ansUserList.length - 1] == "") {
-            userAnsLength -= 1;
-        }
+        
+        let userAnsLength = ansUserListFilter.length;
         console.log(userAnsLength);
 
         if (allans.length == countCorrect && userAnsLength == allans.length) {
-  
             alert("ยินดีด้วย คุณตอบถูก!")
-            document.getElementById('pre_'+ allmode + num).style["display"] = 'none';
+            // document.getElementById('pre_'+ allmode + num).style["display"] = 'none';
+            document.getElementById('pre_'+ allmode + num).classList.add("close");
             document.getElementById('preans_'+ allmode + num).style["display"] = 'block';
             document.getElementById('btnnext').style["opacity"] = '1';
 

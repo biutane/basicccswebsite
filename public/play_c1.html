@@ -26,7 +26,7 @@
                 <div class="flexbox" id="intro_flexbox1">
                     <h1 id="head">Flexbox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 20px; color: white; justify-content: end;">1/20</span></h1>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="suborder" style="font-size: 20px; color: white; justify-content: end;">/20</span></h1>
                     <p id="question">
                         มาร่ายคาถาช่วยชีวิตเจ้าแมวที่กำลังจะจมน้ำให้ขึ้นแพได้สำเร็จกัน โดยคุณสามารถใช้ align-items เป็นคำสั่งที่จะช่วยจัดเรียง items ในแนวตั้ง
                         </p>
@@ -94,7 +94,7 @@
                 <div class="flexbox" id="intro_flexbox7">
                     <h1 id="head">Flexbox</h1>
                     <p id="question">ใช้ <span class="help">justify-content</span> อีกครั้ง
-                        เพื่อช่วยชีวิตเจ้าแมวสามตัวที่กำลังจะจมน้ำให้ขึ้นแพที่อยู่ด้านซ้าย </p>
+                        เพื่อช่วยชีวิตเจ้าแมวที่กำลังจะจมน้ำให้ขึ้นแพที่อยู่ด้านซ้าย </p>
               
                 </div>
                 <div class="flexbox" id="intro_flexbox8">
@@ -191,7 +191,11 @@
                 </div>
                 <div class="flexbox" id="intro_flexbox20">
                     <h1 id="head">Flexbox</h1>
-                    <p id="question">มาช่วยเจ้าหมีกลับไปหาเจ้าของที่เตียงนอนกัน โดยคุณสามารถใช้ align-itemsเป็นคำสั่งที่จะช่วยจัดเรียง items ในแนวตั้ง
+                    <p id="question">ช่วยเจ้าแมวขึ้นแพ โดยใช้ CSS ที่ได้เรียนรู้มา<br>
+                        flex-direction<br>
+                        flex-wrap<br>
+                        align-content<br>
+                        justify-content<br>
                         </p>
                 </div>
 
@@ -478,8 +482,8 @@
 <!--             
             <div id="show"></div> -->
         </div>
-        <div class="preview_flexbox" style="background-image: url('pic/flexbox/river.png'); background-size: cover;">
-                <div class="flexbox" id="pre_flexbox1">
+        <div class="preview_flexbox" style="background-image: url('pic/flexbox/river.png'); background-size: cover;"> 
+            <div class="flexbox" id="pre_flexbox1">
                     <div class="cat">
                         <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
                     </div>
@@ -602,26 +606,18 @@
                 </div> 
                 <div class="flexbox" id="pre_flexbox7">
                     <div class="cat">
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
                         <div id="cat2"><img src="./pic/flexbox/cat2.png" width ="100%"></div>
-                        <div id="cat3"><img src="./pic/flexbox/cat3.png" width ="100%"></div>
                     </div>
                     <div class="raft">
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
-                        <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
                     </div>
                 </div> 
                 <div class="flexbox" id="preans_flexbox7">
                     <div class="cat">
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div><br>
                         <div id="cat2"><img src="./pic/flexbox/cat2.png" width ="100%"></div>
-                        <div id="cat3"><img src="./pic/flexbox/cat3.png" width ="100%"></div>
                     </div>
                     <div class="raft">
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
-                        <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
                     </div>
                 </div> 
                 <div class="flexbox" id="pre_flexbox8">
@@ -784,6 +780,30 @@
                         <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
                     </div>
                 </div> 
+                <div class="flexbox" id="pre_flexbox15">
+                    <div class="cat">
+                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div id="cat2"><img src="./pic/flexbox/cat2.png" width ="100%"></div>
+                        <div id="cat3"><img src="./pic/flexbox/cat3.png" width ="100%"></div>
+                    </div>
+                    <div class="raft">
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
+                        <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
+                    </div>
+                </div> 
+                <div class="flexbox" id="preans_flexbox15">
+                    <div class="cat">
+                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div id="cat2"><img src="./pic/flexbox/cat2.png" width ="100%"></div>
+                        <div id="cat3"><img src="./pic/flexbox/cat3.png" width ="100%"></div>
+                    </div>
+                    <div class="raft">
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
+                        <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
+                    </div>
+                </div> 
                 <div class="flexbox" id="pre_flexbox16">
                     <div class="cat">
                         <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
@@ -795,13 +815,17 @@
                         <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
                     </div>
                     <div class="raft">
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                        <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
-                        <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
-                        <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
-                        <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div class="r1">
+                            <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                            <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
+                            <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
+                            <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
+                            <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
+                        </div>
+                        <div class="r2">
+                            <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                            <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        </div>
                     </div>
                 </div> 
                 <div class="flexbox" id="preans_flexbox16">
@@ -843,60 +867,64 @@
                         <div id="cat3"><img src="./pic/flexbox/cat3.png" width ="100%"></div>
                     </div>
                     <div class="raft">
+                        <div class="kk">
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                    </div>
+                        <div class="kk">
                         <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
                         <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
                         <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
                         <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
                         <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
+                    </div>
+                        <div class="kk">
                         <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
                         <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
                         <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
                         <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
                         <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
+                    </div>
                     </div>
                 </div> 
                 <div class="flexbox" id="pre_flexbox18">
-                    <div class="cat" id="fc18_1">
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                    <div class="all_fc18">
+                        <div class="cat" id="fc18_1">
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c3" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c4" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c5" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        </div>
+                        <div class="cat" id="fc18_2">
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c3" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c4" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c5" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        </div>
+                        <div class="cat" id="fc18_3">
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c3" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c4" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c5" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        </div>
                     </div>
-                    <div class="cat" id="fc18_2">
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                    </div>
-                    <div class="cat" id="fc18_3">
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                    </div>
-                    <div class="raft" id="fr18_1">
+                    <div class="raft">
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                    </div>
-                    <div class="raft" id="fr18_2">
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                    </div>
-                    <div class="raft" id="fr18_3">
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
@@ -908,19 +936,19 @@
                     <div class="cat">
                         <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
                         <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div class="c33" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div class="c44" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div class="c55" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
                         <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
                         <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div class="c33" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div class="c44" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div class="c55" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
                         <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
                         <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div class="c33" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div class="c44" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div class="c55" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
                     </div>
                     <div class="raft">
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
@@ -939,36 +967,46 @@
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                     </div>
-                </div>  
+                </div>
                 <div class="flexbox" id="pre_flexbox19">
-                    <div class="cat">
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                    <div class="all_fc18">
+                        <div class="cat" id="fc19_1">
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c3" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c4" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c5" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        </div>
+                        <div class="cat" id="fc19_2">
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c3" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c4" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c5" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        </div>
+                        <div class="cat" id="fc19_3">
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c3" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c4" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c5" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        </div>
                     </div>
-                    <div class="raft">
+                    <div class="raft" id="fr19_1">
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                    </div>
+                    <div class="raft" id="fr19_2">
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                    </div>
+                    <div class="raft" id="fr19_3">
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
@@ -977,123 +1015,199 @@
                     </div>
                 </div>  
                 <div class="flexbox" id="preans_flexbox19">
+                    <div class="all_fc19">
+                        <div class="cat" id="fc19_1">
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c3" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c4" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c5" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        </div>
+                        <div class="cat" id="fc19_2">
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c3" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c4" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c5" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        </div>
+                        <div class="cat" id="fc19_3">
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c3" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c4" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                            <div class="c5" id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        </div>
+                    </div>
+                    <div class="raft" id="fr19_1">
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                    </div>
+                    <div class="raft" id="fr19_2">
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                    </div>
+                    <div class="raft" id="fr19_3">
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                    </div>
+                </div> 
+                <div class="flexbox" id="pre_flexbox20">
                     <div class="cat">
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
-                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div id="cat3"><img src="./pic/flexbox/cat3.png" width ="100%"></div>
+                        <div id="cat2"><img src="./pic/flexbox/cat2.png" width ="100%"></div>
+                        <div id="cat3"><img src="./pic/flexbox/cat3.png" width ="100%"></div>
+                        <div id="cat2"><img src="./pic/flexbox/cat2.png" width ="100%"></div>
                         <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
                         <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
                         <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
                     </div>
                     <div class="raft">
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
-                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
+                        <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
+                        <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
+                        <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                         <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
                     </div>
-                </div>  
+                </div> 
+                <div class="flexbox" id="preans_flexbox20">
+                    <div class="cat">
+                        <div id="cat3"  style="left: 25px;"><img src="./pic/flexbox/cat3.png" width ="100%"></div>
+                        <div id="cat2"  style="left: 9px;"><img src="./pic/flexbox/cat2.png" width ="100%"></div>
+                        <div id="cat3"  style="left: -7px;"><img src="./pic/flexbox/cat3.png" width ="100%"></div>
+                        <div id="cat2"  style="left: -24px;"><img src="./pic/flexbox/cat2.png" width ="100%"></div>
+                        <div id="cat1"  style="left: -40px;"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div id="cat1"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                        <div id="cat1" style="left: -15px;"><img src="./pic/flexbox/cat1.png" width ="100%"></div>
+                    </div>
+                    <div class="raft">
+                        <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
+                        <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
+                        <div id="yellow"><img src="./pic/flexbox/yellow.png" width ="100%"></div>
+                        <div id="orange"><img src="./pic/flexbox/orange.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                        <div id="pink"><img src="./pic/flexbox/pink.png" width ="100%"></div>
+                    </div>
+                </div> 
+                 
         </div>
-        <div class="preview_grid" style="background-image: url('pic/grid/IMG_2164.png'); background-size: cover;">
+        <div class="preview_grid">
+            <div id="floor">
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+            </div>
+            <div id="soil">
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+                <span class="plot"></span>
+            </div>
             <div class="grid" id="pre_grid1">
-                <div class="cat">
-                    <div id="cat1"><img src="https://cdn.discordapp.com/attachments/942982244946022433/1090037278182752326/b930f8320c1554af3fc7d2bb7bab3f17-old-teddy-bear-illustration.png" width ="100%">
+                <div id="plants">
+                    <div class="plant mred">
+                        <div class="red"></div>
                     </div>
                 </div>
-                <div class="raft">
-                    <div class="bed1"><img src="https://cdn.discordapp.com/attachments/942982244946022433/1090038673984200734/248-2484530_bedroom-cartoon-household-goods-cartoon-bed-transparent.png" width ="100%">
+                <div id="farm">
+                    <div class="water m1">
+                        <div class="water1"></div>
                     </div>
                 </div>
             </div>  
             <div class="grid" id="preans_grid1">
-                <div class="cat">
-                    <div id="cat1"><img src="https://cdn.discordapp.com/attachments/942982244946022433/1090037278182752326/b930f8320c1554af3fc7d2bb7bab3f17-old-teddy-bear-illustration.png" width ="100%">
+                <div id="plants">
+                    <div class="plant mred">
+                        <div class="red"></div>
                     </div>
                 </div>
-                <div class="raft">
-                    <div class="bed1"><img src="https://cdn.discordapp.com/attachments/942982244946022433/1090038673984200734/248-2484530_bedroom-cartoon-household-goods-cartoon-bed-transparent.png" width ="100%">
+                <div id="farm">
+                    <div class="water m1">
+                        <div class="water1"></div>
                     </div>
                 </div>
             </div>  
             <div class="grid" id="pre_grid2">
-                <div id="bear">
-                    <div class="bear1"><img src="https://png.pngtree.com/png-vector/20221222/ourmid/pngtree-animal-cartoon-children-little-yellow-dog-png-image_6490610.png" width ="100%">
+                <div id="plants">
+                    <div class="plant mpurple">
+                        <div class="purple"></div>
                     </div>
                 </div>
-                <div id='bed'>
-                    <div class="bed1"><img src="https://cdn.discordapp.com/attachments/942982244946022433/1090038673984200734/248-2484530_bedroom-cartoon-household-goods-cartoon-bed-transparent.png" width ="100%">
+                <div id="farm">
+                    <div class="water m2">
+                        <div class="water2"></div>
                     </div>
                 </div>
             </div>  
             <div class="grid" id="preans_grid2">
-                <div id="bear">
-                    <div class="bear1"><img src="https://png.pngtree.com/png-vector/20221222/ourmid/pngtree-animal-cartoon-children-little-yellow-dog-png-image_6490610.png" width ="100%">
+                <div id="plants">
+                    <div class="plant mred">
+                        <div class="red"></div>
                     </div>
                 </div>
-                <div id='bed'>
-                    <div class="bed1"><img src="https://cdn.discordapp.com/attachments/942982244946022433/1090038673984200734/248-2484530_bedroom-cartoon-household-goods-cartoon-bed-transparent.png" width ="100%">
-                    </div>
-                </div>
-            </div>  
-            <div class="grid" id="pre_grid3">
-                <div id="bear">
-                    <div class="bear1"><img src="https://static.vecteezy.com/system/resources/previews/013/367/152/original/cute-cheerful-green-frog-cartoon-character-free-png.png" width ="100%">
-                    </div>
-                </div>
-                <div id='bed'>
-                    <div class="bed1"><img src="https://cdn.discordapp.com/attachments/942982244946022433/1090038673984200734/248-2484530_bedroom-cartoon-household-goods-cartoon-bed-transparent.png" width ="100%">
+                <div id="farm">
+                    <div class="water m1">
+                        <div class="water1"></div>
                     </div>
                 </div>
             </div>  
-            <div class="grid" id="preans_grid3">
-                <div id="bear">
-                    <div class="bear1"><img src="https://static.vecteezy.com/system/resources/previews/013/367/152/original/cute-cheerful-green-frog-cartoon-character-free-png.png" width ="100%">
-                    </div>
-                </div>
-                <div id='bed'>
-                    <div class="bed1"><img src="https://cdn.discordapp.com/attachments/942982244946022433/1090038673984200734/248-2484530_bedroom-cartoon-household-goods-cartoon-bed-transparent.png" width ="100%">
-                    </div>
-                </div>
-            </div> 
-            <div class="grid" id="preans_grid4">
-                <div id="bear">
-                    <div class="bear1"><img src="https://cdn.discordapp.com/attachments/942982244946022433/1090037278182752326/b930f8320c1554af3fc7d2bb7bab3f17-old-teddy-bear-illustration.png" width ="100%">
-                    </div>
-                </div>
-                <div id='bed'>
-                    <div class="bed1"><img src="https://cdn.discordapp.com/attachments/942982244946022433/1090038673984200734/248-2484530_bedroom-cartoon-household-goods-cartoon-bed-transparent.png" width ="100%">
-                    </div>
-                </div>
-            </div>  
-            <div class="grid" id="pre_grid4">
-                <div id="bear">
-                    <div class="bear1"><img src="https://png.pngtree.com/png-vector/20221222/ourmid/pngtree-animal-cartoon-children-little-yellow-dog-png-image_6490610.png" width ="100%">
-                    </div>
-                </div>
-                <div id='bed'>
-                    <div class="bed1"><img src="https://cdn.discordapp.com/attachments/942982244946022433/1090038673984200734/248-2484530_bedroom-cartoon-household-goods-cartoon-bed-transparent.png" width ="100%">
-                    </div>
-                </div>
-            </div>  
+            
+            
+          
 
         </div>
               

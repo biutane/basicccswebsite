@@ -28,8 +28,7 @@ body{
     align-items: center;
 }
 
-.code, 
-.preview_grid{
+.code{
     width: 50%;
     height: 100%;
     padding: 10px;
@@ -54,9 +53,12 @@ body{
 #txt_flexbox9,
 #txt_flexbox13,
 #txt_flexbox14,
-#txt_flexbox15,
 #txt_flexbox17{
     height: 50px;
+}
+
+#txt_flexbox15{
+    height: 75px;
 }
 
 
@@ -157,17 +159,20 @@ label{
     overflow: hidden;
     display: block;
 }
-
-.preview_grid{
+.preview_grid{    
+    background-color: #454242;
     position: sticky;
-    /* background-image: url("pic/flexbox/river.png"); */
-   
-    margin-top: 20px;
-    width: 80vw;
-    height: 90vh;
+    top: 1em;
+    width: 40vw;
+    height: 40vw;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: calc(100vh - 2em);
+    max-height: calc(100vh - 2em);
     overflow: hidden;
-    border-radius: 4px;
-    display: none;
+    border: 8px solid #322D2D;
+    border-radius: 12px;
+    display: block;
 }
 
 #csscode{
@@ -459,15 +464,20 @@ ul{
     font-size: 14px;
 }
 
-
-
-#intro_flexbox18,
-#area_flexbox18,
-#pre_flexbox14
-/* #preans_flexbox17 */
-{
-    display: block;
+.preview_flexbox{
+    display: none;
 }
+
+
+/* #intro_flexbox20,
+#area_flexbox15,
+#pre_flexbox16
+#preans_flexbox15 */
+/* .preview_grid */
+/* {
+    display: block;
+} */
+
 
 #pre_flexbox1 .raft{
     align-items: flex-end;
@@ -582,8 +592,17 @@ ul{
 #pre_flexbox7 .raft,
 #preans_flexbox7 .cat,
 #preans_flexbox7 .raft{
-    flex-direction: column;
+    align-items: center;
 }
+
+#pre_flexbox7 .cat{
+    justify-content: flex-end;
+}
+
+#preans_flexbox7 .cat{
+    justify-content: flex-start;
+}
+
 
 #preans_flexbox7 #cat2{
     margin-top: 22px;
@@ -733,23 +752,235 @@ ul{
     margin-top: 22px;
 }
 
-/* #pre_flexbox18 #fc18_1,
-#pre_flexbox18 #fc18_2,
-#pre_flexbox18 #fc18_3,
-#pre_flexbox18 #fr18_1,
-#pre_flexbox18 #fr18_2,
-#pre_flexbox18 #fr18_3{
+
+#pre_flexbox15 .raft,
+#preans_flexbox15 .raft,
+#preans_flexbox15 .cat{
+    flex-direction: column-reverse;
     justify-content: space-between;
-} */
+    align-items: flex-end;
+}
+
+#preans_flexbox15 .cat{
+    left: -16px;
+}
 
 
+#pre_flexbox19 #fc19_1,
+#pre_flexbox19 #fc19_2,
+#pre_flexbox19 #fc19_3,
+#pre_flexbox19 #fr19_1,
+#pre_flexbox19 #fr19_2,
+#pre_flexbox19 #fr19_3,
+#preans_flexbox19 #fc19_1,
+#preans_flexbox19 #fc19_2,
+#preans_flexbox19 #fc19_3,
+#preans_flexbox19 #fr19_1,
+#preans_flexbox19 #fr19_2,
+#preans_flexbox19 #fr19_3{
+    justify-content: space-between;
+}
+
+#pre_flexbox19 #fc19_1,
+#preans_flexbox19 #fc19_3,
+#pre_flexbox19 #fr19_3,
+#preans_flexbox19 #fr19_3{
+    align-items: center;
+}
+
+#preans_flexbox19 #fc19_2,
+#pre_flexbox19 #fr19_2,
+#preans_flexbox19 #fr19_2{
+    margin-top: 126px;
+}
+
+#pre_flexbox19 #fc19_3{
+    align-items: flex-end;
+}
+
+#pre_flexbox19 #fc19_2{
+    margin-top: 381px;
+}
+
+ #fc19_1 .c3,
+ #fc19_2 .c3,
+ #fc19_3 .c3{
+    left: -7px;
+}
+
+ #fc19_1 .c4,
+ #fc19_2 .c4,
+ #fc19_3 .c4{
+    left: -11px;
+}
+
+ #fc19_1 .c5,
+ #fc19_2 .c5,
+ #fc19_3 .c5{
+    left: -13px;
+}
 
 
+#pre_flexbox18 .raft,
+#preans_flexbox18 .raft,
+#preans_flexbox18 .cat{
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-between;
+}
+
+.c33{
+    left: -7px;
+}
+
+.c44{
+    left: -11px;
+}
+
+.c55{
+    left: -13px;
+}
+
+#fc18_1 .c3,
+#fc18_2 .c3,
+#fc18_3 .c3{
+   left: -7px;
+}
+
+#fc18_1 .c4,
+#fc18_2 .c4,
+#fc18_3 .c4{
+   left: -11px;
+}
+
+#fc18_1 .c5,
+#fc18_2 .c5,
+#fc18_3 .c5{
+   left: -13px;
+}
+
+#pre_flexbox18 #fc18_2{
+    margin-top: 123px;
+}
+
+#pre_flexbox18 .cat{
+    justify-content: space-between;
+}
+
+#fc18_3{
+    align-items: center;
+}
 
 
+#pre_flexbox20 .raft,
+#preans_flexbox20 .raft,
+#preans_flexbox20 .cat{
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    align-content: space-between;
+    justify-content: center;
+}
+
+#pre_flexbox20 .cat{
+    width: 5000px;
+}
+
+.close {
+    display: none!important;
+}
+
+#floor, #soil, #farm, #plants{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#floor .plot{
+    z-index: 80;
+    background: none;
+    box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.05), 
+    inset -2px -2px 0 #322D2D;
+}
+
+.plot{
+    width: 100%;
+    height: 100%;
+    background-image: url('pic/grid/soil.png');
+    background-size: calc(8vw - 8px);
+}
+
+.plant{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}   
 
 
+#soil{
+    overflow: hidden;
+}
 
+.plant .red{
+    width: 100%;
+    height: 100%;
+    background-position: left top;
+    background-size: calc(8vw - 8px);
+    background-image: url('pic/grid/red.png');
+}
+
+.plant .purple{
+    width: 100%;
+    height: 100%;
+    background-position: left top;
+    background-size: calc(8vw - 8px);
+    background-image: url('pic/grid/purple.png');
+}
+
+#farm{
+    z-index: 60;
+}
+
+#plants{
+    z-index: 70;
+}
+
+.water .water1{
+    width: 100%;
+    height: 100%;
+    background-position: left top;
+    background-size: calc(8vw - 8px);
+    background-image: url('pic/grid/water1.gif');
+}
+
+.water .water2{
+    width: 100%;
+    height: 100%;
+    background-position: left top;
+    background-size: calc(8vw - 8px);
+    background-image: url('pic/grid/water2.gif');
+}
+
+#pre_grid15,
+#pre_grid2
+/* #preans_grid2 */
+{
+    display: block;
+}
+
+#pre_grid1 .plant{
+    grid-column-start: 4; 
+}
+
+#preans_grid1 .plant,
+#preans_grid1 .water{
+    grid-column-start: 4; 
+}
 
 
 

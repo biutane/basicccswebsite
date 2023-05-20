@@ -25,12 +25,34 @@ roomsRef.child(codeRoom).once("value", (snapshot) => {
 
     usersRef.child(winnerUid).once("value", (ss) => {
         const user = ss.val();
-        result.innerHTML += `<div>winner : ${user.displayName}</div>`;
+        result.innerHTML += `<div class="playerone">
+                                <div class="profile">
+                                    <div class="pic" id="picprofile">
+                                        <img src="${user.photoURL}">
+                                    </div>
+                                    <div class="proname" id="nickname1">
+                                        <div class="username1">${user.displayName}</div>
+                                    </div>
+                                </div>
+                                <div id="winner">WINNER!!!</div>
+                            </div>
+                            <hr class="new2">`;
+        console.log("winja");
     })
 
     usersRef.child(loserUid).once("value", (ss) => {
         const user = ss.val();
-        result.innerHTML += `<div>loser : ${user.displayName}</div>`;
+        result.innerHTML += `<div class="playerone">
+                                <div class="profile">
+                                    <div class="pic" id="picprofile">
+                                        <img src="${user.photoURL}">
+                                    </div>
+                                    <div class="proname" id="nickname1">
+                                        <div class="username1">${user.displayName}</div>
+                                    </div>
+                                </div>
+                                <div id="loser">LOSER T-T</div>
+                            </div>`;
     })
 })
 

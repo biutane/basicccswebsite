@@ -521,11 +521,11 @@ nav {
     border-radius:10px;
     border-bottom-right-radius:0;
     border-top-right-radius:0;
-    padding: 15px 45px;
+    padding: 15px 55px;
     height: 20px;
     align-items: center;
     display: flex;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     color: black;
     background-color: white;
   }
@@ -536,12 +536,13 @@ nav {
     border-left:none;
     border-bottom-left-radius:0;
     border-top-left-radius:0;
-    padding: 15px 15px;
-    background-image: radial-gradient(circle 248px at center, #9C5CED 0%, #9C5CED 47%, #9C5CED 100%);
+    padding: 15px 7px;
+    background-color: white;
     height: 20px;
     align-items: center;
     display: flex;
-    border: 1px solid #8A69D4;
+    color: white;
+
   }
   
   span.tlt{
@@ -569,4 +570,7 @@ nav {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    height: 40px;
+    background-color: #9C5CED;
+    border-radius: 15%;
 }

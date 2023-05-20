@@ -92,9 +92,9 @@ function setupUI(user) {
 
 const gotomode = document.querySelector('#btn-playgame');
 
-gotomode.addEventListener("click", (event) => {
-        setupUI();
-});
+// gotomode.addEventListener("click", (event) => {
+//         setupUI();
+// });
 
 
 

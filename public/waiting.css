@@ -97,7 +97,7 @@ nav {
     
 }
 
-.buttonjoin{
+.proname{
     display: flex;
     text-align: center;
     align-items: center;
@@ -113,10 +113,9 @@ nav {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 24pt;
+    font-size: 16pt;
     font-family: 'Kanit', sans-serif;
     margin: 20px 10px;
-    cursor: pointer;
     border-radius: 30px;
     /* flex: 1; */
 }
@@ -128,10 +127,9 @@ nav {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 24pt;
+    font-size: 16pt;
     font-family: 'Kanit', sans-serif;
     margin: 20px 10px;
-    cursor: pointer;
     border-radius: 30px;
     /* flex: 1; */
 }
@@ -256,10 +254,10 @@ nav {
     justify-content: center;
 }
 .playerone .pic img{
-    width: 15vw;
+    width: 13vw;
 }
 .playertwo .pic img{
-    width: 15vw;
+    width: 13vw;
 }
 .username-x div{
     font-size: 1.7vw;

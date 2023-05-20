@@ -14,6 +14,14 @@ const userRef = firebase.database().ref("users")
 let playerNumber;
 let matching = false;
 
+function getList(user) {
+    if (user) {
+        ref.child(user.uid).on('value', (snapshot) => {
+            // readList(snapshot)
+        })
+    }
+}
+
 const timerEl = document.querySelector(".waiting");
 roomsRef.child(codeRoom).on("value", (snapshot) => {
     let roomInfo = snapshot.val();
@@ -38,18 +46,23 @@ function setRoomInfo(roomInfo){
         playerNumber = "uid1";
         console.log(playerNumber);
     }
-     else if (roomInfo.uid2 == currentUser.uid) {
+    else if (roomInfo.uid2 == currentUser.uid) {
         playerNumber = "uid2";
     }
-    // else if (roomInfo.uid1 == currentUser.uid || roomInfo.uid2 == currentUser.uid) {
-    //     console.log(playerNumber);
-    //     roomsRef.child(roomInfo.uid1).on("value", user => {
-    //         user = user.val()
-    //         document.querySelector('#pic-profile img').src = user.photoURL
-    //         document.querySelector('#nickname div').innerHTML = user.displayName
-    //     })
-    // }
-
+    if (roomInfo.uid1 == currentUser.uid || roomInfo.uid2 == currentUser.uid) {
+        userRef.child(roomInfo.uid1).once("value", user => {
+            user = user.val()
+            document.querySelector('#pic-profile img').src = user.photoURL
+            document.querySelector('#nickname1 div').innerHTML = user.displayName
+        })
+    }
+    if (roomInfo.uid2) {
+        userRef.child(roomInfo.uid2).once("value", user => {
+            user = user.val()
+            document.querySelector('#invite img').src = user.photoURL
+            document.querySelector('#nickname2 div').innerHTML = user.displayName
+        })
+    }
     categoryEl.innerHTML = roomInfo.category;
     category = roomInfo.category;
 
@@ -59,25 +72,6 @@ function setRoomInfo(roomInfo){
     //     btnStart.disabled = true;
     // }
 }
-
-// roomsRef.on("value", (snapshot)=>{
-//     snapshot = snapshot.val()
-//     const currentuser = firebase.auth().currentUser
-//     for(const r in snapshot){
-//         const roomInfo = snapshot[r]
-//         console.log(roomInfo);
-//         console.log(userRef);
-//         if (roomInfo.uid1 == currentUser.uid || roomInfo.uid2 == currentUser.uid) {
-//             // roomInfo = room
-//             roomsRef.child(roomInfo.uid1).on("value", user => {
-//             user = user.val()
-//             document.querySelector('#pic-profile img').src = user.photoURL
-//             document.querySelector('#nickname div').innerHTML = user.displayName
-//         })
-    
-//         }
-//     }
-// })
 
         
 btnStart.addEventListener("click", () => {
@@ -118,8 +112,10 @@ function Matching(){
                 const roomWaiting = roomsMatching[code];
                 let findRoom = false;
                 if (roomWaiting.category == category){
+                    console.log(code)
                     roomsRef.child(code).once("value", (ss) => {
                         const room = ss.val();
+                        console.log(room)
                         if (room["uid1"] == null || room["uid1"] == ""){
                             console.log(code + " : Free for uid1");
                             roomsRef.child(code).update({

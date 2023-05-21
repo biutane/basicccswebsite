@@ -185,7 +185,7 @@ label{
     width: 90%;
     height: 90%;
     overflow: hidden;
-    display: block;
+    display: none;
 }
 .preview_grid{    
     background-color: #454242;
@@ -200,7 +200,7 @@ label{
     overflow: hidden;
     border: 8px solid #322D2D;
     border-radius: 12px;
-    display: block;
+    display: none;
 }
 
 #csscode{
@@ -295,6 +295,7 @@ label{
     border-radius: 4px;
     overflow-y: scroll;
     overflow-x: hidden;
+    border-radius: 4px;
 }
 
 #head{
@@ -484,9 +485,62 @@ ul{
     display: none;
 }
 
+#intro_color1,
+#intro_color2,
+#intro_color3,
+#intro_color4,
+#intro_color5,
+#intro_color6,
+#intro_color7,
+#intro_color8,
+#intro_color9,
+#intro_color10{
+    display: none;
+}
+
+#area_color1,
+#area_color2,
+#area_color3,
+#area_color4,
+#area_color5,
+#area_color6,
+#area_color7,
+#area_color8,
+#area_color9,
+#area_color10{
+    display: none; 
+}
+
+#pre_color1,
+#pre_color2,
+#pre_color3,
+#pre_color4,
+#pre_color5,
+#pre_color6,
+#pre_color7,
+#pre_color8,
+#pre_color9,
+#pre_color10{
+    display: none;
+}
+
+
+#preans_color1,
+#preans_color2,
+#preans_color3,
+#preans_color4,
+#preans_color5,
+#preans_color6,
+#preans_color7,
+#preans_color8,
+#preans_color9,
+#preans_color10{
+    display: none;
+}
 
 .flexbox li,
-.grid li {
+.grid li,
+.color li{
     font-size: 14px;
 }
 
@@ -1219,22 +1273,188 @@ ul{
 }
 
 
-.preview_flexbox
-.preview_grid
-{
-    display: none;
-}
-
-/* #intro_flexbox16,
-#area_flexbox16,
-#pre_flexbox16
-#preans_grid1
+/* .preview_flexbox
+.preview_grid */
+/* .preview_color
 {
     display: block;
 } */
+
+#intro_color7,
+#area_color1,
+#pre_color2
+/* #preans_color2 */
+{
+    display: block;
+}
 
 #suborder{
     font-size: 20px; color: white; 
     justify-content: end;
 }
 
+.preview_color{    
+    background-color: #1B1D2D;
+    position: sticky;
+    top: 1em;
+    width: 43.5vw;
+    height: 43.5vw;
+    overflow: hidden;
+    border-radius: 4px;
+    display: block;
+}
+
+.sky{
+    background-color: #1B1D2D;
+    position: sticky;
+    top: 1em;
+    width: 43.5vw;
+    height: 43.5vw;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+#pre_color1 .sky{
+    background-color: #1B1D2D;
+}
+
+#preans_color1 .sky{
+    background-color: pink;
+}
+
+.txtco{
+    color: #fff;
+    font-size: 50pt;
+}
+
+#pre_color2 .txtco{
+    color: #fff;
+}
+
+#preans_color2 .txtco{
+    color: pink;
+}
+
+#cir1{
+    background-color: #fff;
+    border-radius: 50%;
+    width: 230px;
+    height: 230px;
+    border: 5px solid #d9d5d5;
+    position: relative;
+}
+
+#tri11{
+    width: 126px;
+    height: 100px;
+    position: relative;
+}
+
+.circle, .txtcir10, .txtco{
+    display: flex;
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle{
+    top: 93px;
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#pre_color3 #cir1{
+    background-color: #fff;
+}
+
+#preans_color3 #cir1{
+    background-color: purple;
+}
+
+#pre_color4 #cir1{
+    background-color: #fff;
+}
+
+#preans_color4 #cir1{
+    background-color: pink;
+    border: 5px solid red;
+}
+
+#pre_color5 #cir1{
+    background-color: #fff;
+}
+
+#preans_color5 #cir1{
+    background-color: #54BBE5 ;
+}
+
+#pre_color6 #cir1{
+    background-color: #fff;
+}
+
+#preans_color6 #cir1{
+    background-color: rgb(255, 0, 0) ;
+}
+
+.photoco{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#pre_color7 #cir1{
+    background-color: #fff;
+}
+
+#preans_color7 #cir1{
+    background-color: hsl(120, 100%, 50%); 
+}
+
+#pre_color8 #cir1{
+    background-color: #fff;
+}
+
+#preans_color8 #cir1{
+    background-color: hsl(180, 20%, 80%); 
+}
+
+#pre_color9 #cir1{
+    background-color: #fff;
+}
+
+#preans_color9 #cir1{
+    background-color: pink;
+    border: 5px solid hsl(60, 100%, 75%); 
+}
+
+.txtcir10{
+    font-size: 18pt;
+    color: black;
+}
+
+#preans_color10 #cir1{
+    background-color: rgb(0,255,0); 
+    border: 5px solid hsl(60, 100%, 75%); 
+}
+
+#preans_color10 .txtcir10{
+    color: orange;
+}
+
+#txt_color4,
+#txt_color9{
+    height: 50px;
+}
+
+
+#txt_color10{
+    height: 75px;
+}

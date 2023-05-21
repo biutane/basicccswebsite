@@ -1220,18 +1220,18 @@ ul{
 
 
 .preview_flexbox
-/* .preview_grid */
+.preview_grid
 {
-    display: block;
+    display: none;
 }
 
-#intro_flexbox16,
+/* #intro_flexbox16,
 #area_flexbox16,
 #pre_flexbox16
-/* #preans_grid1 */
+#preans_grid1
 {
     display: block;
-}
+} */
 
 #suborder{
     font-size: 20px; color: white; 

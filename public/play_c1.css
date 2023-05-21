@@ -82,8 +82,7 @@ nav {
 #txt_flexbox8,
 #txt_flexbox9,
 #txt_flexbox13,
-#txt_flexbox14,
-#txt_flexbox17{
+#txt_flexbox14{
     height: 50px;
 }
 
@@ -92,8 +91,7 @@ nav {
 }
 
 
-#txt_flexbox17
-#txt_flexbox20{
+#txt_flexbox18{
     height: 100px;
 }
 
@@ -344,9 +342,7 @@ ul{
 #intro_flexbox15,
 #intro_flexbox16,
 #intro_flexbox17,
-#intro_flexbox18,
-#intro_flexbox19,
-#intro_flexbox20{
+#intro_flexbox18{
     display: none;
     
 }
@@ -368,9 +364,7 @@ ul{
 #area_flexbox15,
 #area_flexbox16,
 #area_flexbox17,
-#area_flexbox18,
-#area_flexbox19,
-#area_flexbox20{
+#area_flexbox18{
     display: none;
 }
 
@@ -391,9 +385,7 @@ ul{
 #pre_flexbox15,
 #pre_flexbox16,
 #pre_flexbox17,
-#pre_flexbox18,
-#pre_flexbox19,
-#pre_flexbox20{
+#pre_flexbox18{
     display: none;
 }
 
@@ -417,9 +409,7 @@ ul{
 #preans_flexbox15,
 #preans_flexbox16,
 #preans_flexbox17,
-#preans_flexbox18,
-#preans_flexbox19,
-#preans_flexbox20{
+#preans_flexbox18{
     display: none;
 }
 
@@ -507,15 +497,6 @@ ul{
 .preview_grid{
     display: none;
 }
-
-/* #intro_flexbox20,
-#area_flexbox15,
-#pre_flexbox16
-#preans_flexbox15 */
-/* .preview_grid */
-/* {
-    display: block;
-} */
 
 
 #pre_flexbox1 .raft{
@@ -805,39 +786,39 @@ ul{
 }
 
 
-#pre_flexbox19 #fc19_1,
-#pre_flexbox19 #fc19_2,
-#pre_flexbox19 #fc19_3,
-#pre_flexbox19 #fr19_1,
-#pre_flexbox19 #fr19_2,
-#pre_flexbox19 #fr19_3,
-#preans_flexbox19 #fc19_1,
-#preans_flexbox19 #fc19_2,
-#preans_flexbox19 #fc19_3,
-#preans_flexbox19 #fr19_1,
-#preans_flexbox19 #fr19_2,
-#preans_flexbox19 #fr19_3{
+#pre_flexbox17 #fc19_1,
+#pre_flexbox17 #fc19_2,
+#pre_flexbox17 #fc19_3,
+#pre_flexbox17 #fr19_1,
+#pre_flexbox17 #fr19_2,
+#pre_flexbox17 #fr19_3,
+#preans_flexbox17 #fc19_1,
+#preans_flexbox17 #fc19_2,
+#preans_flexbox17 #fc19_3,
+#preans_flexbox17 #fr19_1,
+#preans_flexbox17 #fr19_2,
+#preans_flexbox17 #fr19_3{
     justify-content: space-between;
 }
 
-#pre_flexbox19 #fc19_1,
-#preans_flexbox19 #fc19_3,
-#pre_flexbox19 #fr19_3,
-#preans_flexbox19 #fr19_3{
+#pre_flexbox17 #fc19_1,
+#preans_flexbox17 #fc19_3,
+#pre_flexbox17 #fr19_3,
+#preans_flexbox17 #fr19_3{
     align-items: center;
 }
 
-#preans_flexbox19 #fc19_2,
-#pre_flexbox19 #fr19_2,
-#preans_flexbox19 #fr19_2{
+#preans_flexbox17 #fc19_2,
+#pre_flexbox17 #fr19_2,
+#preans_flexbox17 #fr19_2{
     margin-top: 126px;
 }
 
-#pre_flexbox19 #fc19_3{
+#pre_flexbox17 #fc19_3{
     align-items: flex-end;
 }
 
-#pre_flexbox19 #fc19_2{
+#pre_flexbox17 #fc19_2{
     margin-top: 381px;
 }
 
@@ -860,9 +841,9 @@ ul{
 }
 
 
-#pre_flexbox18 .raft,
-#preans_flexbox18 .raft,
-#preans_flexbox18 .cat{
+#pre_flexbox16 .raft,
+#preans_flexbox16 .raft,
+#preans_flexbox16 .cat{
     flex-wrap: wrap;
     align-content: space-around;
     justify-content: space-between;
@@ -898,11 +879,11 @@ ul{
    left: -13px;
 }
 
-#pre_flexbox18 #fc18_2{
+#pre_flexbox16 #fc18_2{
     margin-top: 123px;
 }
 
-#pre_flexbox18 .cat{
+#pre_flexbox16 .cat{
     justify-content: space-between;
 }
 
@@ -911,16 +892,16 @@ ul{
 }
 
 
-#pre_flexbox20 .raft,
-#preans_flexbox20 .raft,
-#preans_flexbox20 .cat{
+#pre_flexbox18 .raft,
+#preans_flexbox18 .raft,
+#preans_flexbox18 .cat{
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
     align-content: space-between;
     justify-content: center;
 }
 
-#pre_flexbox20 .cat{
+#pre_flexbox18 .cat{
     width: 5000px;
 }
 
@@ -1238,4 +1219,22 @@ ul{
 }
 
 
+.preview_flexbox
+/* .preview_grid */
+{
+    display: block;
+}
+
+#intro_flexbox16,
+#area_flexbox16,
+#pre_flexbox16
+/* #preans_grid1 */
+{
+    display: block;
+}
+
+#suborder{
+    font-size: 20px; color: white; 
+    justify-content: end;
+}
 

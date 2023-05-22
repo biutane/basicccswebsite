@@ -51,8 +51,8 @@ function setupUI(roomInfo){
         document.querySelector('#pre_'+ allmode + num).style["display"] = 'block';  
 
         document.querySelector('#intro_'+ allmode + num).style["display"] = 'block';
-        document.querySelector('#btnsub').style["display"] = 'block';
-        document.querySelector('#btnnext').style["display"] = 'block';
+        document.querySelector('.btnsub1').style["display"] = 'block';
+        document.querySelector('.btnnext2').style["display"] = 'block';
 
         document.querySelector('#suborder').innerHTML = num +'/'+ maxQuestion;
 
@@ -68,8 +68,8 @@ function setupUI(roomInfo){
     // console.log('#intro_'+ allmode + num)
     document.querySelector('#intro_'+ allmode + num).style["display"] = 'block';
     // console.log('#intro_'+ allmode + num)
-    document.querySelector('#btnsub').style["display"] = 'block';
-    document.querySelector('#btnnext').style["display"] = 'block';
+    document.querySelector('.btnsub1').style["display"] = 'block';
+    document.querySelector('.btnnext1').style["display"] = 'block';
 
     document.querySelector('#suborder').innerHTML = num +'/'+ maxQuestion;
 
@@ -160,20 +160,25 @@ console.log(dataf[urlParams.get("allmode")]);
 //   });
 
 // console.log('hello ' + $('#txt_' + allmode + num).val())
-const btnans = document.querySelector('#btnsub');
+const btnans = document.querySelector('.btnsub1');
 
 btnans.addEventListener('click',checkans);
 
-
+console.log(btnans)
 console.log('')
 
-const btnNext = document.querySelector("#btnnext");
-// console.log(clearans)
+const btngo1 = document.querySelector(".btnnext1");
+console.log(btngo1)
 
-
+const btnsubs = document.querySelectorAll(".btnsub2");
+btnsubs.forEach((btn) => {
+  btn.addEventListener("click", checkans);
+})
 // console.log(clearans.value)
 
-btnNext.addEventListener("click", (event) => {
+
+
+btngo1.addEventListener("click", (event) => {
     if (num >= maxQuestion) {
         roomsRef.child(codeRoom).update({
             status: "finish"
@@ -192,14 +197,55 @@ btnNext.addEventListener("click", (event) => {
 
 });
 
+const btngo2 = document.querySelector(".btnnext2");
+btngo2.addEventListener("click", (event) => {
+    if (num >= maxQuestion) {
+        roomsRef.child(codeRoom).update({
+            status: "finish"
+        })
+    } else {
+        let clearans = document.querySelector('#txt_'+ allmode + num);
+        clearans.value ='';
+        console.log(clearans.value) 
+        // clearans.querySelector()
+        // clearans = txtcss.value;
+        num += 1;
+        showQuestion();
+        // questionNumber += 1;
+    }
+
+
+});
+
+
+// const btnGo = document.querySelectorAll(".btnnext");
+// btnGo.addEventListener("click", (event) => {
+//     if (num >= maxQuestion) {
+//         roomsRef.child(codeRoom).update({
+//             status: "finish"
+//         })
+//     } else {
+//         let clearans = document.querySelector('#txt_'+ allmode + num);
+//         clearans.value ='';
+//         console.log(clearans.value) 
+//         // clearans.querySelector()
+//         // clearans = txtcss.value;
+//         num += 1;
+//         showQuestion();
+//         // questionNumber += 1;
+//     }
+
+
+// });
+
 // allmode = "selector"
 function showQuestion(){
     // clearans.value = '';
     if (allmode == "selector"){
         document.querySelector('#editor').style["display"] = 'none';
         document.querySelector('.all_editor').style["display"] = 'block';
-        document.getElementById('btnsub').style["display"] = 'block';
-        document.getElementById('btnnext').style["opacity"] = '0.5';
+        document.querySelector('.btnsub2').style["display"] = 'block';
+        document.querySelector('.btnnext2').style["opacity"] = '0.5';
         document.querySelector('#intro_'+ allmode + (num-1)).style["display"] = 'none';
         document.querySelector('#area_'+ allmode + (num-1)).style["display"] = 'none';
         document.querySelector('#html_'+ allmode + (num-1)).style["display"] = 'none';
@@ -219,8 +265,8 @@ function showQuestion(){
     else{
     console.log('#area_'+ allmode + (num-1) + ', textarea')
     // console.log(clearans)
-    document.getElementById('btnsub').style["display"] = 'block';
-    document.getElementById('btnnext').style["opacity"] = '0.5';
+    document.querySelector('.btnsub1').style["display"] = 'block';
+    document.querySelector('.btnnext1').style["opacity"] = '0.5';
     // console.log(document.querySelector('#btnnext').style["opacity"])
     document.querySelector('#intro_'+ allmode + (num-1)).style["display"] = 'none';
     document.querySelector('#area_'+ allmode + (num-1)).style["display"] = 'none';
@@ -331,7 +377,13 @@ function checkans(){
             // document.getElementById('pre_'+ allmode + num).style["display"] = 'none';
             document.getElementById('pre_'+ allmode + num).classList.add("close");
             document.getElementById('preans_'+ allmode + num).style["display"] = 'block';
-            document.getElementById('btnnext').style["opacity"] = '1';
+            if(allmode == "selector"){
+                document.querySelector('.btnnext2').style["opacity"] = '1';
+            }
+            else{
+            document.querySelector('.btnnext1').style["opacity"] = '1';
+            }
+
 
             roomsRef.child(codeRoom).once("value", (snapshot) => {
                 const roomInfo = snapshot.val();
@@ -351,12 +403,26 @@ function checkans(){
                             winner: playerNumber
                         })
                     }
-                    document.querySelector('#btnnext').innerHTML = "Finish";
+                    if(allmode == "selector"){
+                        document.querySelector('.btnnext2').innerHTML = "Finish";
+                    }
+                    else{
+                        document.querySelector('.btnnext1').innerHTML = "Finish";
+                    }
+                  
                 }
             })
 
             console.log(num) 
-            document.querySelector('#btnsub').style["display"] = 'none';      
+            if(allmode == "selector"){
+                document.querySelector('.btnsub2').style["display"] = 'none';
+            }
+            else{
+                document.querySelector('.btnsub1').style["display"] = 'none';
+            }
+          
+            // document.querySelector('.btnsub').style["display"] = 'none';  
+
         }
         else if(!checktxt.value){
             alert("คุณยังไม่ได้กรอกคำตอบ")

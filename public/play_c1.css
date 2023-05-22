@@ -140,7 +140,7 @@ label{
     color: #fff;
 }
 
-#btnsub{
+.btnsub1, .btnsub2{
     color: #fff;
     font-family: 'Kanit', sans-serif;
     font-size: 18px;
@@ -158,11 +158,12 @@ label{
     /* display: block; */
 }
 
-#btnsub:hover{
+.btnsub1:hover,
+.btnsub2:hover{
     background-color: #CF8BFC;
 }
 
-#btnnext{
+.btnnext1, .btnnext2{
     color: #fff;
     font-family: 'Kanit', sans-serif;
     font-size: 18px;
@@ -180,7 +181,8 @@ label{
     /* display: none; */
 }
 
-#btnnext:hover{
+.btnnext1:hover,
+.btnnext2:hover{
     background-color: #F260B5;
 }
 
@@ -1164,12 +1166,12 @@ ul{
     background-image: url('pic/grid/water2.gif');
 }
 
-/* .preview_grid{
+.preview_grid{
     display: block;
-} */
+}
 
-/* 
-#intro_grid1,
+
+/* #intro_grid1,
 #area_grid1,
 #pre_grid14
 #preans_grid14
@@ -1305,6 +1307,17 @@ ul{
     grid-area: 1 / 2 / 4 / 6;
 }
 
+
+#intro_grid1,
+#area_grid1,
+#pre_grid14
+/* #preans_grid14 */
+{
+    display: block;
+}
+
+
+
 /* grid14 */
 #pre_grid14 .plant,
 #preans_grid14 .plant,
@@ -1326,10 +1339,10 @@ ul{
     grid-row: 5;
 }
 
-#pre_grid14 .water33{
-    grid-column: 3 / 4;
-    grid-row: 2 / 5;
-}
+/* #pre_grid14 .water33{
+    grid-column-start: 3;
+} */
+
 
 #txt_grid3,
 #txt_grid4,
@@ -2223,7 +2236,7 @@ ul{
 }
 
 .all_editor{
-    display: block;
+    display: none;
 }
 
 

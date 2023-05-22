@@ -1,7 +1,7 @@
 {
     "flexbox" : {
-      "1" : ["align-items: flex-end"],
-      "2" : ["align-items: center"],
+      "1" : ["align-items:flex-end"],
+      "2" : ["align-items:center"],
       "3" : ["justify-content:flex-end"],
       "4" : ["justify-content:center"],
       "5" : ["justify-content:space-around"],

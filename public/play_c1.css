@@ -308,7 +308,7 @@ label{
     /* margin-top: 20px; */
     font-size: 16px;
     line-height: 1.5;
-    color: #646464;
+    color: #fff;
     font-family: 'Source Code Pro', monospace;
     margin-top: 5%;
     display: block;
@@ -1166,9 +1166,9 @@ ul{
     background-image: url('pic/grid/water2.gif');
 }
 
-.preview_grid{
+/* .preview_grid{
     display: block;
-}
+} */
 
 
 /* #intro_grid1,
@@ -1307,14 +1307,14 @@ ul{
     grid-area: 1 / 2 / 4 / 6;
 }
 
-
+/* 
 #intro_grid1,
 #area_grid1,
 #pre_grid14
-/* #preans_grid14 */
+#preans_grid14
 {
     display: block;
-}
+} */
 
 
 

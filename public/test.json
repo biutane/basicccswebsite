@@ -1,7 +1,7 @@
 {
     "flexbox" : {
-      "1" : ["align-items:flex-end"],
-      "2" : ["align-items:center"],
+      "1" : ["align-items: flex-end"],
+      "2" : ["align-items: center"],
       "3" : ["justify-content:flex-end"],
       "4" : ["justify-content:center"],
       "5" : ["justify-content:space-around"],
@@ -45,12 +45,32 @@
       "2" : ["color:yellow"],
       "3" : ["background-color:purple"],
       "4" : ["background-color:pink", "border-color:red"],
-      "5" : ["background-color:#54BBE5"],
+      "5" : ["background-color:#54bbe5"],
       "6" : ["background-color:rgb(0,255,0)"],
       "7" : ["background-color:hsl(120, 100%, 50%)"],
       "8" : ["background-color:hsl(180, 20%, 80%)"],
       "9" : ["background-color:pink", "border-color:hsl(60, 100%, 75%)"],
       "10" : ["background-color:rgb(0,255,0)", "border-color:hsl(60, 100%, 75%)", "color:orange"],
       "max-question": "10"
+    },
+
+    "selector" : {
+      "1" : ["bottle"],
+      "2" : ["flask"],
+      "3" : ["#love"],
+      "4" : ["bottle spider"],
+      "5" : ["flask"],
+      "6" : [".small"],
+      "7" : ["clover.small"],
+      "8" : ["flask, bottle"],
+      "9" : ["*"],
+      "10" : ["bottle + cover"],
+      "11" : ["bottle ~ clover"],
+      "12" : ["bottle > spider"],
+      "13" : ["spider:first-child"],
+      "14" : ["spider:last-child"],
+      "15" : ["bottle:nth-child(3)"],
+      "16" : ["flask:nth-last-child(1)"],
+      "max-question": "16"
     }
 }

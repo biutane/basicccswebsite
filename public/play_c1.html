@@ -538,19 +538,565 @@
                     </div>
                 </div>
 
+                <div class="selector" id="intro_selector1">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">1/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select the bottles (เลือกขวด)
+                    </p>
+                    <p id="question">
+                        Select elements ตาม type <span id="showsc">X</span><br>
+                        เป็นการระบุทุก ๆ element บน page โดยใช้ type แทนที่จะใช้ #id หรือชื่อ .class
+                        ใช้ type selector ถ้าคุณต้องการระบุชื่อที่ต้องการ
+                        </p>
+                    <ul>
+                        <li>ตัวอย่างเช่น bottle เพื่อเลือกขวดที่วางอยู่บนโต๊ะ</li>
+                    </ul>
+                </div>
+                <div class="selector" id="intro_selector2">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">2/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select the flask (เลือกขวดปริมาตร)
+                    </p>
+                    <p id="question">
+                        Select elements ตาม type <span id="showsc">X</span><br>
+                        เป็นการระบุทุก ๆ element บน page โดยใช้ type แทนที่จะใช้ #id หรือชื่อ .class
+                        ใช้ type selector ถ้าคุณต้องการระบุชื่อที่ต้องการ
+                        </p>
+                    <ul>
+                        <li>ตัวอย่างเช่น bottle เพื่อเลือกขวดที่วางอยู่บนโต๊ะ</li>
+                    </ul>
+                </div>
+                <div class="selector" id="intro_selector3">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">3/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select the love flask
+                    </p>
+                    <p id="question">
+                        Select elements ที่มี id <span id="showsc">#id</span><br>
+                        เครื่องหมายสี่เหลี่ยม (#) ไว้ด้านหน้านั้นแปลว่าให้เรา select โดยใช้ id
+                        </p>
+                    <ul>
+                        <li>ตัวอย่างเช่น<br>
+                            #star เลือกองค์ประกอบใดก็ได้ทีมี id="star"<br>
+                            <xmp> ul#star เลือก <ul id="star"></xmp>
 
-
-
-             
-
-
-
-                
+                        </li>
+                    </ul>
+                </div>
+                <div class="selector" id="intro_selector4">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">4/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select spider in the bottle
+                    </p>
+                    <p id="question">
+                        Select elements ภายใน elements อื่น <span id="showsc">X Y</span><br>
+                        Selects Y ภายใน X Y เรียกว่า descendant selector ใช้เมื่อต้องการระบุ 
+                        selector ของคุณให้เฉพาะเจาะจงยิ่งขึ้น
+                        </p>
+                    <ul>
+                        <li>ตัวอย่างเช่น<br>
+                            <xmp> p spider เพื่อเลือก <spider> ทั้งหมดที่อยู่ภายใน <p></xmp>
+                        </li>
+                    </ul>
+                </div>
+                <div class="selector" id="intro_selector5">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">5/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select horn in the love flask
+                    </p>
+                    <p id="question">
+                        Select อีกครั้งโดยใช้ Descendant และ ID Selectors ร่วมกัน<span id="showsc">#id X</span>
+                        </p>
+                    <ul>
+                        <li>ตัวอย่างเช่น<br>
+                            <xmp>#love spider เพื่อเลือก <spider> ทั้งหมด</xmp>ที่อยู่ภายใน Elements ที่มี id=”love”</li>
+                    </ul>
+                </div>
+                <div class="selector" id="intro_selector6">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">6/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select the small spider
+                    </p>
+                    <p id="question">
+                        Select elements จาก classname <span id="showsc">.classname</span><br>
+                        class selector ความต่างระหว่าง id และ class นั้นคือ สามารถระบุ element ได้หลายตัว แต่ id ใช้เพื่อระบุ 
+                        element ที่เจาะจงไปเลย element มีได้ id เดียว แต่มีได้หลาย class
+                        </p>
+                    <ul>
+                        <li>ตัวอย่างเช่น<br>
+                            .small เลือก elements ทั้งหมด ที่มี class=".small"</li>
+                    </ul>
+                </div>
+                <div class="selector" id="intro_selector7">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">7/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select the small clover
+                    </p>
+                    <p id="question">
+                        Select อีกครั้งโดยใช้รูปแบบ <span id="showsc">X.className</span>
+                        </p>
+                    <ul>
+                        <li>ตัวอย่างเช่น<br>
+                            <xmp>spider.small เพื่อเลือก <spider>ทั้งหมดที่มี </xmp>class="small"
+                                #love.small เพื่อเลือก element ทั้งหมดที่มี id=”love” และมี class="small" ด้วย</li>
+                    </ul>
+                </div>
+                <div class="selector" id="intro_selector8">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">8/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select all the flask and bottles
+                    </p>
+                    <p id="question">
+                        Select elements ร่วมกัน ด้วยเครื่องหมายจุลภาค ,  <span id="showsc">X, Y</span><br>
+                        จะเลือก elements X และ Y ทั้งหมด โดยสามารถระบุได้มากกว่าสองตัวเลือก
+                        </p>
+                    <ul>
+                        <li>ตัวอย่างเช่น<br>
+                            x, y, div เลือก x, y and div ทั้งหมด</li>
+                    </ul>
+                </div>
+                <div class="selector" id="intro_selector9">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">9/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select all the things!
+                    </p>
+                    <p id="question">
+                        select ทุกอย่าง!<span id="showsc"> * </span><br>
+                        สามารถเลือก element ทั้งหมดได้ด้วย *
+                        </p>
+                </div>
+                <div class="selector" id="intro_selector10">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">10/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select every clover that's next to a bottle
+                    </p>
+                    <p id="question">
+                        select element ที่ตามหลัง element อื่นโดยตรง<span id="showsc">X + Y</span><br>
+                        ระบุเฉพาะ element ที่อยู่ชิดถัดจาก element ต้นทาง (อยู่ชิดติดกันจริง ๆ)
+                        </p>
+                </div>
+                <div class="selector" id="intro_selector11">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">11/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select spider beside the bottle
+                    </p>
+                    <p id="question">
+                        Select elements ที่มี id<span id="showsc">X ~ Y</span><br>
+                        เลือกเฉพาะ element ที่อยู่ต่อและติดกับ selector ก่อนหน้า เหมือนกับตัวเลือกที่อยู่ติดกัน 
+                        (A + B) แต่จะได้รับ element ต่อไปทั้งหมดด้วย แทนที่จะเป็น element เดียว 
+                        </p>
+                    <ul>
+                        <li>ตัวอย่างเช่น<br>
+                            X ~ Y เลือกY ทั้งหมด ที่ตามหลัง X</li>
+                    </ul>
+                </div>
+                <div class="selector" id="intro_selector12">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">12/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select spider directly in the bottle
+                    </p>
+                    <p id="question">
+                        Select children โดยตรงของ elements<span id="showsc">X > Y</span><br>
+                        เลือกเฉพาะ element ลูกที่อยู่โดยตรงลงไปหนึ่งชั้นเท่านั้น
+                        </p>
+                    <ul>
+                        <li>ตัวอย่างเช่น<br>
+                            X > Y เลือกY ทั้งหมด ที่เป็นลูกY โดยตรง</li>
+                    </ul>
+                </div>
+                <div class="selector" id="intro_selector13">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">13/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select the top spider
+                    </p>
+                    <p id="question">
+                        Select เลือก element ย่อยตัวแรกภายใน element อื่น<span id="showsc">:first-child</span><br>
+                        ระบุแค่ child ตัวแรกของ element parent
+                        </p>
+                    <ul>
+                        <li>ตัวอย่างเช่น<br>
+                            p:first-child selects first child จาก <xmp><p> elements</xmp></li>
+                    </ul>
+                </div>
+                <div class="selector" id="intro_selector14">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">14/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select the bottom spider
+                    </p>
+                    <p id="question">
+                        Select เลือก element ย่อยตัวแรกภายใน element อื่น จากสุดท้าย<span id="showsc">:last-child</span><br>
+                        ตรงข้ามกับ first-child โดยที่ last-child จะระบุ item ตัวสุดท้ายของ element parent แทน
+                        </p>
+                </div>
+                <div class="selector" id="intro_selector15">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">15/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select the 3rd bottle
+                    </p>
+                    <p id="question">
+                        Select elements ตามลำดับelements อื่น <span id="showsc">:nth-child(X)</span><br>
+                    เลือก elements ย่อยที่ n (เช่น: 1, 3, 12 เป็นต้น) ใน elements อื่น
+                        </p>
+                    <ul>
+                        <li>ตัวอย่างเช่น<br>
+                            div p:nth-child(2) เลือก p ลำดับที่2 ในทุก ๆ div</li>
+                    </ul>
+                </div>
+                <div class="selector" id="intro_selector16">
+                    <div id="head">
+                        <h1>Selector</h1>
+                        <span id="suborder">16/16</span>
+                    </div>
+                    <p id="intro_qt">
+                        Select the 1st flask
+                    </p>
+                    <p id="question">
+                        Select elements ตามลำดับelements อื่น จากด้านหลัง<span id="showsc">:nth-last-child(X)</span><br>
+                        เลือก elements ย่อยที่ n (เช่น: 1, 3, 12 เป็นต้น) ใน elements อื่น แต่นับจากด้านหลัง
+                        </p>
+                    <ul>
+                        <li>ตัวอย่างเช่น<br>
+                            div p:nth-last-child(2) เลือก p ลำดับที่2 จากสุดท้าย ในทุก ๆ div</li>
+                    </ul>
+                </div>
+  
             </div>
             <!-- <div class="html-code">
                 <label>HTML</label>
                 <div id="html-code"></div>
             </div> -->
+            <div class="all_editor">
+                <div id="editor1">
+                    <div class="txthead">HTML Viwer</div>
+                    <div id="csscode1">
+                        <div class="line-num1">
+                            1<br>
+                            2<br>
+                            3<br>
+                            4<br>
+                            5<br>
+                            6<br>
+                            7<br>
+                            8<br>
+                            9<br>
+                            10<br>
+                            11<br>
+                            12<br>
+                            13<br>
+                        </div>
+                        <div class="areacode">
+                            <div class="selector" id="html_selector1">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <bottle></bottle></xmp>
+                                    <xmp>   <bottle></bottle></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                            <div class="selector" id="html_selector2">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <bottle></bottle></xmp>
+                                    <xmp>   <flask></flask></xmp>
+                                    <xmp>   <bottle></bottle></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                            <div class="selector" id="html_selector3">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <flask id=”love”>></flask></xmp>
+                                    <xmp>   <bottle></bottle></xmp>
+                                    <xmp>   <flask></flask></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                            <div class="selector" id="html_selector4">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <flask id=”love”></flask></xmp>
+                                    <xmp>   <bottle></xmp>
+                                        <xmp>       <spider></spider></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <flask></flask></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                            <div class="selector" id="html_selector5">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <flask id=”love”></xmp>
+                                    <xmp>       <horn></horn></xmp>
+                                    <xmp>   </flask></xmp>
+                                    <xmp>   <flask></xmp>
+                                    <xmp>       <horn></horn></xmp>
+                                    <xmp>   </flask></xmp>
+                                    <xmp>   <flask></xmp>
+                                    <xmp>       <clover></clover></xmp>
+                                    <xmp>   <flask></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                            <div class="selector" id="html_selector6">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <spider></spider></xmp>
+                                    <xmp>   <bottle></xmp>
+                                    <xmp>       <spider></spider></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <bottle></xmp>
+                                    <xmp>       <spider class=”small”></xmp>
+                                    <xmp>       </spider></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <bottle></bottle></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                            <div class="selector" id="html_selector7">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>    <flask id=”love”></xmp>
+                                    <xmp>       <spider></spider></xmp>
+                                    <xmp>   </flask></xmp>
+                                    <xmp>   <clover class=”small”></xmp>
+                                    <xmp>   </clover></xmp>
+                                    <xmp>   <bottle></xmp>
+                                    <xmp>       <horn></horn></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <bottle></xmp>
+                                    <xmp>   <clover class=”small”></xmp>
+                                    <xmp>   </clover></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <clovr></clover></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                            <div class="selector" id="html_selector8">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <spider class=”small”></xmp>
+                                    <xmp>   </spider></xmp>
+                                    <xmp>   <flask></xmp>
+                                    <xmp>       <spider></spider></xmp>
+                                    <xmp>   </flask></xmp>
+                                    <xmp>   <bottle></xmp>
+                                    <xmp>       <horn></horn></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <bottle></xmp>
+                                    <xmp>   <clover class=”small”></xmp>
+                                    <xmp>   </clover></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <clovr></clover></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                            <div class="selector" id="html_selector9">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <flask id=”love”></xmp>
+                                        <xmp>       <clover class=”small”></clover></xmp>
+                                    <xmp>   </flask></xmp>
+                                    <xmp>   <clover class=”small”></clover></xmp>
+                                    <xmp>   <bottle></xmp>
+                                        <xmp>       <horn></horn></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <bottle></xmp>
+                                        <xmp>       <clover class=”small”></clover></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <clover></clover></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                            
+                            <div class="selector" id="html_selector10">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <spider class=”small”></spiderr></xmp>
+                                    <xmp>   <bottle></xmp>
+                                        <xmp>       <horn></horn></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <clovr></clover></xmp>
+                                    <xmp>   <bottle></xmp>
+                                        <xmp>       <clover class=”small”></clover></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <clovr></clover></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                            
+                            <div class="selector" id="html_selector11">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <clover></clover></xmp>
+                                    <xmp>   <bottle></xmp>
+                                        <xmp>       <spider></spider></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <clover></clover></xmp>
+                                    <xmp>   <clover class="small"></clover></xmp>
+                                    <xmp>   <bottle></bottle></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                            
+                            <div class="selector" id="html_selector12">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <flask></xmp>
+                                        <xmp>       <spider></spider></xmp>
+                                    <xmp>   </flask></xmp>
+                                    <xmp>   <bottle></bottle></xmp>
+                                    <xmp>   <spider></spider></xmp>
+                                    <xmp>   <bottle></xmp>
+                                        <xmp>       <spider></spider></xmp>
+                                    <xmp>   </bottle></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                            
+                            <div class="selector" id="html_selector13">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <clover></clover></xmp>
+                                    <xmp>   <bottle></xmp>
+                                        <xmp>       <spider></spider></xmp>
+                                        <xmp>       <spider></spider></xmp>
+                                        <xmp>       <spider></spider></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <bottle></xmp>
+                                        <xmp>       <horn></horn></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <clover class="small"></clover></xmp>
+                                    <xmp>   <clover></clover></xmp>
+                                <xmp></div></xmp>   
+                            </div>
+                            
+                            <div class="selector" id="html_selector14">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <clover></clover></xmp>
+                                    <xmp>   <bottle></xmp>
+                                        <xmp>       <spider></spider></xmp>
+                                        <xmp>       <spider></spider></xmp>
+                                        <xmp>       <spider></spider></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <bottle></xmp>
+                                        <xmp>       <horn></horn></xmp>
+                                    <xmp>   </bottle></xmp>
+                                    <xmp>   <clover class="small"></clover></xmp>
+                                    <xmp>   <clover></clover></xmp>
+                                <xmp></div></xmp> 
+                            </div>
+                            
+                            <div class="selector" id="html_selector15">
+                                <xmp><div class=”table”>
+                                    <xmp>   <bottle></bottle></xmp>
+                                    <xmp>   <bottle></bottle></xmp>
+                                    <xmp>   <bottle></bottle></xmp>
+                                    <xmp>   <flask></flask></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                            
+                            <div class="selector" id="html_selector16">
+                                <xmp><div class=”table”></xmp>
+                                    <xmp>   <flask></flask></xmp>
+                                    <xmp>   <bottle></bottle></xmp>
+                                    <xmp>   <flask></flask></xmp>
+                                    <xmp>   <bottle></bottle></xmp>
+                                <xmp></div></xmp>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="editor2">
+                    <div class="txthead">CSS Editior</div>
+                    <div id="csscode2">
+                        <div class="line-num2">
+                            1<br>
+                            2<br>
+                            3<br>
+                            4<br>
+                            5<br>
+                            6<br>
+                            7<br>
+                            8<br>
+                            9<br>
+                            10<br>
+                        </div>
+                        <div class="areacode">
+                            <div class="selector" id="area_selector1">
+                                <textarea class="csstxt" id="txt_selector1"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector2">
+                                <textarea class="csstxt" id="txt_selector2"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector3">
+                                <textarea class="csstxt" id="txt_selector3"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector4">
+                                <textarea class="csstxt" id="txt_selector4"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector5">
+                                <textarea class="csstxt" id="txt_selector5"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector6">
+                                <textarea class="csstxt" id="txt_selector6"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector7">
+                                <textarea class="csstxt" id="txt_selector7"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector8">
+                                <textarea class="csstxt" id="txt_selector8"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector9">
+                                <textarea class="csstxt" id="txt_selector9"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector10">
+                                <textarea class="csstxt" id="txt_selector10"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector11">
+                                <textarea class="csstxt" id="txt_selector11"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector12">
+                                <textarea class="csstxt" id="txt_selector12"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector13">
+                                <textarea class="csstxt" id="txt_selector13"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector14">
+                                <textarea class="csstxt" id="txt_selector14"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector15">
+                                <textarea class="csstxt" id="txt_selector15"></textarea>
+                            </div>
+                            <div class="selector" id="area_selector16">
+                                <textarea class="csstxt" id="txt_selector16"></textarea>
+                            </div>
+                        </div>
+                        <button id="btnsub">Submit</button><button id="btnnext">Next</button> 
+                    </div>
+                </div>
+            </div>
+
+
             <div id="editor">
                 <div id="csscode">
                     <div class="line-num">
@@ -2299,17 +2845,176 @@
 
         <div class="selector" id="pre_selector9">
             <div class="bottle">
-                <div id="bt2"><img src="./pic/selectors/bottle2.png" width ="100%"></div>
+                <div id="bt3"><img src="./pic/selectors/bottle3.png" width ="100%"></div>
                 <div class="mid11" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
                 <div id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
             </div>
             <div class="other">
-                <div class="sm2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="sm2 sm21" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
                 <div class="sm2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
                 <div id="uni"><img src="./pic/selectors/uni.png" width ="100%"></div>
                 <div class="bigleaf" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
             </div>
-        </div>   
+        </div>
+        <div class="selector" id="preans_selector9">
+            <div class="bottle">
+                <div id="bt3"><img src="./pic/selectors/bottle3.png" width ="100%"></div>
+                <div class="mid11" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+                <div id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+            </div>
+            <div class="other">
+                <div class="sm2 sm21" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="sm2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div id="uni"><img src="./pic/selectors/uni.png" width ="100%"></div>
+                <div class="bigleaf" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+            </div>
+        </div>
+        
+        
+        <div class="selector" id="pre_selector10">
+            <div class="bottle">
+                <div class="mid11" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+                <div id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+            </div>
+            <div class="other">
+                <div class="spismall" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                <div id="uni"><img src="./pic/selectors/uni.png" width ="100%"></div>
+                <div class="bigleaf bl1" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="sm2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="bigleaf bl2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+            </div>
+        </div>
+        <div class="selector" id="preans_selector10">
+            <div class="bottle">
+                <div class="mid11" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+                <div id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+            </div>
+            <div class="other">
+                <div class="spismall" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                <div id="uni"><img src="./pic/selectors/uni.png" width ="100%"></div>
+                <div class="bigleaf bl1" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="sm2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="bigleaf bl2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+            </div>
+        </div>
+                
+        <div class="selector" id="pre_selector11">
+            <div class="bottle">
+                <div class="mid11" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+                <div id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+            </div>
+            <div class="other">
+                <div class="bigleaf bl1" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                <div class="bigleaf bl2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="sm2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+            </div>
+        </div>
+        <div class="selector" id="preans_selector11">
+            <div class="bottle">
+                <div class="mid11" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+                <div id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+            </div>
+            <div class="other">
+                <div class="bigleaf bl1" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                <div class="bigleaf bl2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="sm2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+            </div>
+        </div>
+        <div class="selector" id="pre_selector12">
+            <div class="bottle">
+                <div id="bt2"><img src="./pic/selectors/bottle2.png" width ="100%"></div>
+                <div class="mid11" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+                <div class="mid12" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+            </div>
+            <div class="other">
+                <div class="s1" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                <div class="s2" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                <div class="s3" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+            </div>
+        </div>
+        <div class="selector" id="preans_selector12">
+            <div class="bottle">
+                <div id="bt2"><img src="./pic/selectors/bottle2.png" width ="100%"></div>
+                <div class="mid11" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+                <div class="mid12" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+            </div>
+            <div class="other">
+                <div class="s1" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                <div class="s2" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                <div class="s3" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+            </div>
+        </div>
+        <div class="selector" id="pre_selector13">
+            <div class="bottle">
+                <div class="mid11" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+                <div class="mid12" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+            </div>
+            <div class="other">
+                <div class="bigleaf bl1" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="allspi">
+                    <div class="s11" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                    <div class="s22" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                    <div class="s33" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                </div>
+                <div id="uni"><img src="./pic/selectors/uni.png" width ="100%"></div>
+                <div class="sm2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="bigleaf bl2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+            </div>
+        </div>
+        <div class="selector" id="preans_selector13">
+            <div class="bottle">
+                <div class="mid11" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+                <div class="mid12" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+            </div>
+            <div class="other">
+                <div class="bigleaf bl1" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="allspi">
+                    <div class="s11" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                    <div class="s22" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                    <div class="s33" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                </div>
+                <div id="uni"><img src="./pic/selectors/uni.png" width ="100%"></div>
+                <div class="sm2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="bigleaf bl2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+            </div>
+        </div>
+        <div class="selector" id="pre_selector14">
+            <div class="bottle">
+                <div class="mid11" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+                <div class="mid12" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+            </div>
+            <div class="other">
+                <div class="bigleaf bl1" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="allspi">
+                    <div class="s11" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                    <div class="s22" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                    <div class="s33" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                </div>
+                <div id="uni"><img src="./pic/selectors/uni.png" width ="100%"></div>
+                <div class="sm2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="bigleaf bl2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+            </div>
+        </div>
+        <div class="selector" id="preans_selector14">
+            <div class="bottle">
+                <div class="mid11" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+                <div class="mid12" id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>
+            </div>
+            <div class="other">
+                <div class="bigleaf bl1" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="allspi">
+                    <div class="s11" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                    <div class="s22" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                    <div class="s33" id="spi1"><img src="./pic/selectors/spider.png" width ="100%"></div>
+                </div>
+                <div id="uni"><img src="./pic/selectors/uni.png" width ="100%"></div>
+                <div class="sm2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+                <div class="bigleaf bl2" id="leaf"><img src="./pic/selectors/leaf.png" width ="100%"></div>
+            </div>
+        </div>
+
         <div class="selector" id="pre_selector15">
             <div class="bottle">
                 <div id="bt1"><img src="./pic/selectors/bottle1.png" width ="100%"></div>

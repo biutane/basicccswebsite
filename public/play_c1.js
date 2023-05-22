@@ -42,6 +42,25 @@ roomsRef.child(codeRoom).on("value", (snapshot) => {
 
 let txtcss;
 function setupUI(roomInfo){
+    if(allmode == "selector"){
+        document.querySelector('#editor').style["display"] = 'none';
+        document.querySelector('.all_editor').style["display"] = 'block';
+        document.querySelector('.preview_' + allmode).style["display"] = 'block';
+        document.querySelector('#area_'+ allmode + num).style["display"] = 'block';
+        document.querySelector('#html_'+ allmode + num).style["display"] = 'block';
+        document.querySelector('#pre_'+ allmode + num).style["display"] = 'block';  
+
+        document.querySelector('#intro_'+ allmode + num).style["display"] = 'block';
+        document.querySelector('#btnsub').style["display"] = 'block';
+        document.querySelector('#btnnext').style["display"] = 'block';
+
+        document.querySelector('#suborder').innerHTML = num +'/'+ maxQuestion;
+
+        txtcss = document.querySelector('#txt_' + roomInfo.category + num);
+        console.log(txtcss.value)
+    }
+
+    else{
     document.querySelector('.preview_' + allmode).style["display"] = 'block';
     document.querySelector('#area_'+ allmode + num).style["display"] = 'block';
     document.querySelector('#pre_'+ allmode + num).style["display"] = 'block';  
@@ -63,6 +82,7 @@ function setupUI(roomInfo){
     txtcss.addEventListener('input', function handleChange(event) {
         console.log(event.target.value);
       });
+    }
 }
 
 console.log(dataf[urlParams.get("allmode")]);
@@ -172,9 +192,31 @@ btnNext.addEventListener("click", (event) => {
 
 });
 
-
+// allmode = "selector"
 function showQuestion(){
     // clearans.value = '';
+    if (allmode == "selector"){
+        document.querySelector('#editor').style["display"] = 'none';
+        document.querySelector('.all_editor').style["display"] = 'block';
+        document.getElementById('btnsub').style["display"] = 'block';
+        document.getElementById('btnnext').style["opacity"] = '0.5';
+        document.querySelector('#intro_'+ allmode + (num-1)).style["display"] = 'none';
+        document.querySelector('#area_'+ allmode + (num-1)).style["display"] = 'none';
+        document.querySelector('#html_'+ allmode + (num-1)).style["display"] = 'none';
+        document.querySelector('#txt_'+ allmode + (num-1)).style["display"] = 'none';
+        console.log('#area_'+ allmode + (num-1))
+        document.querySelector('#preans_'+ allmode + (num-1)).style["display"] = 'none';
+
+        txtcss = document.querySelector('#txt_'+ allmode + num);
+        console.log('#intro_'+ allmode + (num))
+        document.querySelector('#intro_'+ allmode + (num)).style["display"] = 'block';
+        console.log(document.querySelector('#intro_'+ allmode + (num)).style["display"])
+        document.querySelector('#area_'+ allmode + (num)).style["display"] = 'block';
+        document.querySelector('#html_'+ allmode + (num-1)).style["display"] = 'block';
+        document.querySelector('#txt_'+ allmode +  (num)).style["display"] = 'block';
+        document.querySelector('#pre_'+ allmode + (num)).style["display"] = 'block';
+    }
+    else{
     console.log('#area_'+ allmode + (num-1) + ', textarea')
     // console.log(clearans)
     document.getElementById('btnsub').style["display"] = 'block';
@@ -207,7 +249,7 @@ function showQuestion(){
     // showcode.innerHTML = dataf[urlParams.get("allmode")][questionNumber+1]
     // showpre.innerHTML = dataf[urlParams.get("allmode")][questionNumber+1]
     // showpreans.innerHTML = dataf[urlParams.get("allmode")][questionNumber+1]
-
+    }
    
 }
 
@@ -263,7 +305,14 @@ function checkans(){
         ansUserList.forEach((ans) => {
             const ansTrim = ans.trim().toLowerCase();
             const ansSplits = ansTrim.split(":");
-            const ansTrimNew = `${ansSplits[0]?.trim()}:${ansSplits[1]?.trim()}`
+            let ansTrimNew;
+            if (allmode == "selector"){
+                ansTrimNew = ansTrim
+            }
+            else{
+                ansTrimNew = `${ansSplits[0]?.trim()}:${ansSplits[1]?.trim()}`
+            }
+       
             console.log(ansTrimNew);
             if (allAnsCheckArray.includes(ansTrimNew)) {
                 countCorrect += 1;

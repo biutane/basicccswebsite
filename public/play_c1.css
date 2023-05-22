@@ -2257,6 +2257,10 @@ ul{
     width: 100%;
 }
 
+#txt_selector14,
+#txt_selector15{
+    display: none;
+}
 
 
 

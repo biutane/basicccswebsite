@@ -272,7 +272,7 @@ function showQuestion(){
         document.querySelector('#intro_'+ allmode + (num)).style["display"] = 'block';
         console.log(document.querySelector('#intro_'+ allmode + (num)).style["display"])
         document.querySelector('#area_'+ allmode + (num)).style["display"] = 'block';
-        document.querySelector('#html_'+ allmode + (num-1)).style["display"] = 'block';
+        document.querySelector('#html_'+ allmode + (num)).style["display"] = 'block';
         document.querySelector('#txt_'+ allmode +  (num)).style["display"] = 'block';
         document.querySelector('#pre_'+ allmode + (num)).style["display"] = 'block';
     }

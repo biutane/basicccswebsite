@@ -26,7 +26,7 @@ const timerEl = document.querySelector(".waiting");
 roomsRef.child(codeRoom).on("value", (snapshot) => {
     let roomInfo = snapshot.val();
     if (roomInfo.status == "start") {
-        timerEl.innerHTML = "Found Player. Let's go!"
+        // timerEl.innerHTML = "Found Player. Let's go!"
         matchingRef.child(codeRoom).remove();
         setTimeout(() => {
             window.location.href = `play_c1.html?code=${codeRoom}`;

@@ -19,6 +19,11 @@
     
 </head>
 <body>
+    <nav>
+        <div class="back">
+                <button class="btnmenu" id="btn-startgame">ยอมแพ้</button>
+        </div>
+    </nav>
     <div class="container">
         <div class="code">
             <div class="result-win text-center text-white d-none">Go Next!</div>
@@ -482,7 +487,9 @@
                     มาช่วยร่ายคาถาเปลี่ยนลูกแก้วให้กลายเป็นสีแดงโดยระบุตามค่า RGB (red, green, blue) 
                     </p>
                    <p id="co1">ตัวอย่าง สีเขียว RGB (0, 255, 0)<br>
-                        ค่า(value) จะอยู่ระหว่าง 0 ถึง 255</p>
+                        ค่า(value) จะอยู่ระหว่าง 0 ถึง 255<br><br>
+                        ตัวอย่าง สีเขียว RGB (0, 255, 0)<br><br>
+                        value between 0 and 255.</p>
                 </div>
                 <div class="color" id="intro_color7">
                     <div id="head">
@@ -525,6 +532,18 @@
                     </div>
                     <p id="question">           
                         ร่ายคาถาเปลี่ยนลูกแก้วให้กลายเป็นสีชมพู และมีขอบสีเหลืองที่มีความสด100% ความสว่าง75% 
+                    </p> 
+                    <div class="photoco">
+                        <img src="./pic/color/color.png" style="width: 80%;">
+                    </div>
+                </div>
+                <div class="color" id="intro_color10">
+                    <div id="head">
+                        <h1>Color</h1>
+                        <span id="suborder">10/10</span>
+                    </div>
+                    <p id="question">           
+                        ร่ายคาถาเปลี่ยนลูกแก้วให้กลายเป็นเขียวโดยระบุตามค่า RGB มีขอบสีเหลืองที่มีความสว่าง 75% ความสด 100% และเปลี่ยนตัวอักษรเป็นสีส้ม 
                     </p> 
                     <div class="photoco">
                         <img src="./pic/color/color.png" style="width: 80%;">
@@ -1248,7 +1267,8 @@
                         </div>
                         <div class="grid" id="area_grid3">
                             <p id="before">#farm {<br>
-                                &nbsp;&nbsp;display: grid;</p>
+                                &nbsp;&nbsp;display: grid;<br>
+                                &nbsp;&nbsp;grid-column-start: 2;</p>
                             <p id="after">}</p>
                             <p id="before">#water {</p>
                             <textarea class="csstxt" id="txt_grid3"></textarea>
@@ -1256,7 +1276,8 @@
                         </div>
                         <div class="grid" id="area_grid4">
                             <p id="before">#farm {<br>
-                                &nbsp;&nbsp;display: grid;</p>
+                                &nbsp;&nbsp;display: grid;<br>
+                                &nbsp;&nbsp;grid-column-start: 5;</p>
                             <p id="after">}</p>
                             <p id="before">#water {</p>
                             <textarea class="csstxt" id="txt_grid4"></textarea>
@@ -1264,7 +1285,8 @@
                         </div>
                         <div class="grid" id="area_grid5">
                             <p id="before">#farm {<br>
-                                &nbsp;&nbsp;display: grid;</p>
+                                &nbsp;&nbsp;display: grid;<br>
+                                &nbsp;&nbsp;grid-column-start: 1;</p>
                             <p id="after">}</p>
                             <p id="before">#water {</p>
                             <textarea class="csstxt" id="txt_grid5"></textarea>
@@ -1280,7 +1302,8 @@
                         </div>
                         <div class="grid" id="area_grid7">
                             <p id="before">#farm {<br>
-                                &nbsp;&nbsp;display: grid;</p>
+                                &nbsp;&nbsp;display: grid;<br>
+                                &nbsp;&nbsp;grid-column-start: 2;</p>
                             <p id="after">}</p>
                             <p id="before">#water {</p>
                             <textarea class="csstxt" id="txt_grid7"></textarea>
@@ -1288,7 +1311,8 @@
                         </div>
                         <div class="grid" id="area_grid8">
                             <p id="before">#farm {<br>
-                                &nbsp;&nbsp;display: grid;</p>
+                                &nbsp;&nbsp;display: grid;<br>
+                                &nbsp;&nbsp;grid-column-start: 1;</p>
                             <p id="after">}</p>
                             <p id="before">#water {</p>
                             <textarea class="csstxt" id="txt_grid8"></textarea>
@@ -1336,7 +1360,8 @@
                         </div>
                         <div class="grid" id="area_grid14">
                             <p id="before">#farm {<br>
-                                &nbsp;&nbsp;display: grid;</p>
+                                &nbsp;&nbsp;display: grid;<br>
+                                &nbsp;&nbsp;grid-area: 1 / 3 / 6 / 4;</p>
                             <p id="after">}</p>
                             <p id="before">#water {</p>
                             <textarea class="csstxt" id="txt_grid14"></textarea>

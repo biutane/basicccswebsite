@@ -56,11 +56,29 @@ body{
     align-items: center;
     justify-content: flex-start;
     text-align: center;
+    margin-right: 30px;
+
 }
 
 .btnback a{
     text-decoration: none;
     color: black;
+}
+.btnmenu{
+    background-color: crimson;
+    border-color: #9a0808;
+    border-width: 3px;
+    /* border: none; */
+    color: white;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14pt;
+    font-family: 'Kanit', sans-serif;
+    /* margin: 50px 2px; */
+    cursor: pointer;
+    border-radius: 20px;
 }
 
 nav {
@@ -70,6 +88,7 @@ nav {
     display: flex;
     align-items: center;
     position: fixed;
+    justify-content: flex-end;
 }
 
 .csstxt{
@@ -169,10 +188,10 @@ label{
     font-size: 18px;
     padding: 5px 8px;
     border-radius: 8px;
-    background-color: #DE4B92;
+    background-color: #F260B5;
     border: none;
     outline: none;
-    cursor: pointer;
+    cursor: default;
     position: absolute;
     right: 1em;
     bottom: 1em;
@@ -312,6 +331,7 @@ label{
     font-family: 'Source Code Pro', monospace;
     margin-top: 5%;
     display: block;
+    width: 55%;
 }
 
 #editor2{
@@ -322,6 +342,7 @@ label{
     font-family: 'Source Code Pro', monospace;
     margin-top: 5%;
     display: block;
+    width: 45%;
 }
 
 .line-num, .line-num2{
@@ -358,7 +379,7 @@ label{
 .intro{
     /* margin-top: 25px; */
     width: 100%;
-    height: 45%;
+    height: 40%;
     background-color: #1B1D2D;
     border-radius: 4px;
     overflow-y: scroll;
@@ -1344,14 +1365,8 @@ ul{
 } */
 
 
-#txt_grid3,
-#txt_grid4,
-#txt_grid5,
-#txt_grid7,
-#txt_grid8,
 #txt_grid11,
-#txt_grid12,
-#txt_grid14{
+#txt_grid12{
     height: 50px;
 }
 
@@ -2233,10 +2248,13 @@ ul{
     font-size: 16PX;
     padding: 0px 1rem;
     border-radius: 4px;
+
 }
 
 .all_editor{
     display: none;
+    justify-content: space-between;
+    width: 100%;
 }
 
 

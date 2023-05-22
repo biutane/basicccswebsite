@@ -15,11 +15,22 @@ let num = 1;
 const roomsRef = firebase.database().ref("rooms");
 let playerNumber;
 
+let nextlevel1 = document.querySelector(".btnnext1");
+let nextlevel2 = document.querySelector(".btnnext2");
+
+nextlevel1.disabled = true;
+nextlevel2.disabled = true;
+
 roomsRef.child(codeRoom).on("value", (snapshot) => {
     const roomInfo = snapshot.val();
     console.log(roomInfo.status);
     if (roomInfo.status == "finish") {
         document.querySelector(".result-win").classList.remove("d-none");
+        setTimeout(() => {
+            window.location.href = `result.html?code=${codeRoom}`;
+        }, 1000)
+    }
+    else if (roomInfo.status == "giveup") {
         setTimeout(() => {
             window.location.href = `result.html?code=${codeRoom}`;
         }, 1000)
@@ -44,7 +55,7 @@ let txtcss;
 function setupUI(roomInfo){
     if(allmode == "selector"){
         document.querySelector('#editor').style["display"] = 'none';
-        document.querySelector('.all_editor').style["display"] = 'block';
+        document.querySelector('.all_editor').style["display"] = 'flex';
         document.querySelector('.preview_' + allmode).style["display"] = 'block';
         document.querySelector('#area_'+ allmode + num).style["display"] = 'block';
         document.querySelector('#html_'+ allmode + num).style["display"] = 'block';
@@ -243,7 +254,7 @@ function showQuestion(){
     // clearans.value = '';
     if (allmode == "selector"){
         document.querySelector('#editor').style["display"] = 'none';
-        document.querySelector('.all_editor').style["display"] = 'block';
+        document.querySelector('.all_editor').style["display"] = 'flex';
         document.querySelector('.btnsub2').style["display"] = 'block';
         document.querySelector('.btnnext2').style["opacity"] = '0.5';
         document.querySelector('#intro_'+ allmode + (num-1)).style["display"] = 'none';
@@ -252,7 +263,10 @@ function showQuestion(){
         document.querySelector('#txt_'+ allmode + (num-1)).style["display"] = 'none';
         console.log('#area_'+ allmode + (num-1))
         document.querySelector('#preans_'+ allmode + (num-1)).style["display"] = 'none';
-
+        
+        nextlevel1.disabled = true;
+        nextlevel2.disabled = true;
+        
         txtcss = document.querySelector('#txt_'+ allmode + num);
         console.log('#intro_'+ allmode + (num))
         document.querySelector('#intro_'+ allmode + (num)).style["display"] = 'block';
@@ -275,7 +289,8 @@ function showQuestion(){
     // document.querySelector('#pre_'+ allmode + (num-1)).style["display"] = 'none';
     document.querySelector('#preans_'+ allmode + (num-1)).style["display"] = 'none';
     
-    
+    nextlevel1.disabled = true;
+    nextlevel2.disabled = true;
     
     // showintro.innerHTML = dataf[urlParams.get("allmode")][questionNumber]
     // showcode.innerHTML = dataf[urlParams.get("allmode")][questionNumber]
@@ -377,13 +392,21 @@ function checkans(){
             // document.getElementById('pre_'+ allmode + num).style["display"] = 'none';
             document.getElementById('pre_'+ allmode + num).classList.add("close");
             document.getElementById('preans_'+ allmode + num).style["display"] = 'block';
+
+            nextlevel1.disabled = false;
             if(allmode == "selector"){
                 document.querySelector('.btnnext2').style["opacity"] = '1';
+                document.querySelector('.btnnext2').style["cursor"] = 'pointer';
+                nextlevel2.disabled = false;
             }
             else{
-            document.querySelector('.btnnext1').style["opacity"] = '1';
+                document.querySelector('.btnnext1').style["opacity"] = '1';
+                document.querySelector('.btnnext1').style["cursor"] = 'pointer';
+                nextlevel1.disabled = false;
             }
 
+            
+            
 
             roomsRef.child(codeRoom).once("value", (snapshot) => {
                 const roomInfo = snapshot.val();
@@ -426,13 +449,37 @@ function checkans(){
         }
         else if(!checktxt.value){
             alert("คุณยังไม่ได้กรอกคำตอบ")
+            nextlevel1.disabled = true;
+            nextlevel2.disabled = true;
         }
         else{
             alert("ลองใหม่อีกครั้งนะ!")
+            nextlevel1.disabled = true;
+            nextlevel2.disabled = true;
         } 
 
     })
 }
+
+const btnBack = document.querySelector(".btnmenu");
+btnBack.addEventListener("click", () => {
+    roomsRef.child(codeRoom).once("value", (snapshot) => {
+        // const room = snapshot.val();
+        // roomsRef.child(codeRoom).child(playerNumber).remove();
+        // const oppositePlayer = playerNumber == "uid1" ? "uid2" : "uid1";
+        // if (!room[oppositePlayer]) {
+            roomsRef.child(codeRoom).update({
+                status: "giveup"
+            })
+        // }
+
+  
+        // setTimeout(() => {
+        //     window.location.href = "index.html";
+        // }, 500)
+    });
+})
+
 
 
 

@@ -629,9 +629,14 @@ ul{
 
 .flexbox li,
 .grid li,
-.color li,
-.co1{
+.color li{
     font-size: 14px;
+}
+
+#co1{
+    font-size: 14px;
+    color: white;
+    padding: 0px 10%;
 }
 
 
@@ -1474,7 +1479,7 @@ ul{
 }
 
 #preans_color7 #cir1{
-    background-color: hsl(120, 100%, 50%); 
+    background-color: hsl(120, 50%, 50%); 
 }
 
 #pre_color8 #cir1{
@@ -2294,8 +2299,6 @@ ul{
 #pre_grid14 .water{
      grid-area: 1 / 3 / 6 / 4;
 }
-
-
 
 
 

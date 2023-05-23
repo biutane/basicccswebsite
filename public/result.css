@@ -52,7 +52,7 @@ body{
 }
 .result{
     width: 55vw;
-    height: 22vw;
+    height: 25vw;
     background-color: #F9F9F9;
     border-radius: 40px;
     border: 10px solid #E1D5F4;
@@ -132,3 +132,8 @@ hr.new2 {
     border: 1px solid #E1D5F4;
     width: 100%;
   }
+
+.give{
+    font-size: 16pt;
+    font-weight: bold;
+}

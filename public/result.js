@@ -22,7 +22,11 @@ roomsRef.child(codeRoom).once("value", (snapshot) => {
 
     const winnerUid = roomInfo[roomInfo.winner];
     const loserUid = roomInfo[roomInfo.winner == "uid1" ? "uid2" : "uid1"];
-
+    
+    if (roomInfo.status == "giveup") {
+        result.innerHTML += "<div class='give'>เสียดายจัง:( มีคนออกจากห้อง</div>"
+      }
+    
     usersRef.child(winnerUid).once("value", (ss) => {
         const user = ss.val();
         result.innerHTML += `<div class="playerone">

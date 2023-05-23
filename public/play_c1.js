@@ -469,7 +469,9 @@ btnBack.addEventListener("click", () => {
         // const oppositePlayer = playerNumber == "uid1" ? "uid2" : "uid1";
         // if (!room[oppositePlayer]) {
             roomsRef.child(codeRoom).update({
+                winner: playerNumber == "uid1" ? "uid2" : "uid1",
                 status: "giveup"
+                
             })
         // }
 

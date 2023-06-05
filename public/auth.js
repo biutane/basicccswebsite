@@ -30,14 +30,7 @@ function loginUser(event){
             displayName: user.displayName,
             photoURL: user.photoURL
         })
-        // if( user){
-        //     window.location.href = "./menu.html"
-        // }
-        // location.replace("./menu.html")
-        // setTimeout(function (){
-        //     // loginModal.hide();
-        //     window.location.href = "./menu.html"
-        // }, 1000);
+
     }).catch((error) => {
         // Handle Errors here.
         var errorCode = error.code;
